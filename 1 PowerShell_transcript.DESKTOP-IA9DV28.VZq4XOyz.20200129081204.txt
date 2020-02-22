@@ -1,0 +1,1645 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200129081204
+Nombre de usuario: DESKTOP-IA9DV28\Usuario
+Usuario RunAs: DESKTOP-IA9DV28\Usuario
+Nombre de la configuración: 
+Máquina: DESKTOP-IA9DV28 (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 5568
+PSVersion: 5.1.17763.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1
+BuildVersion: 10.0.17763.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Usuario\Documents\PowerShell_transcript.DESKTOP-IA9DV28.VZq4XOyz.20200129081204.txt
+PS C:\Users\Usuario> help *security*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Set-NetFirewallSecurityFilter     Function  NetSecurity               ...
+Get-NetFirewallSecurityFilter     Function  NetSecurity               ...
+
+
+PS C:\Users\Usuario> help *registers*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Register-ArgumentCompleter        Cmdlet    Microsoft.PowerShell.Core Registers a custom argument completer.
+Register-PSSessionConfiguration   Cmdlet    Microsoft.PowerShell.Core Creates and registers a new session c...
+Enable-PSRemoting                 Cmdlet    Microsoft.PowerShell.Core Configures the computer to receive re...
+Register-EngineEvent              Cmdlet    Microsoft.PowerShell.U... Subscribes to events that are generat...
+New-EventLog                      Cmdlet    Microsoft.PowerShell.M... Creates a new event log and a new eve...
+Register-WmiEvent                 Cmdlet    Microsoft.PowerShell.M... Subscribes to a Windows Management In...
+Remove-EventLog                   Cmdlet    Microsoft.PowerShell.M... Deletes an event log or unregisters a...
+about_PSSnapins                   HelpFile                            Describes Windows PowerShell snap-ins...
+
+
+PS C:\Users\Usuario> help Register-WmiEvent
+
+NOMBRE
+    Register-WmiEvent
+
+SINOPSIS
+    Subscribes to a Windows Management Instrumentation (WMI) event.
+
+
+SINTAXIS
+    Register-WmiEvent [-Class] <String> [[-SourceIdentifier] <String>] [[-Action] <ScriptBlock>]
+    [-ComputerName <String>] [-Credential <PSCredential>] [-Forward] [-MaxTriggerCount <Int32>] [-MessageData
+    <PSObject>] [-Namespace <String>] [-SupportEvent] [-Timeout <Int64>] [<CommonParameters>]
+
+    Register-WmiEvent [-Query] <String> [[-SourceIdentifier] <String>] [[-Action] <ScriptBlock>]
+    [-ComputerName <String>] [-Credential <PSCredential>] [-Forward] [-MaxTriggerCount <Int32>] [-MessageData
+    <PSObject>] [-Namespace <String>] [-SupportEvent] [-Timeout <Int64>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Register-WmiEvent cmdlet subscribes to Windows Management Instrumentation (WMI) events on the local
+    computer or on a remote computer.
+
+    When the subscribed WMI event is raised, it is added to the event queue in your local session even if the
+    event occurs on a remote computer. To get events in the event queue, use the Get-Eventcmdlet.
+
+    You can use the parameters of Register-WmiEvent to subscribe to events on remote computers and to specify
+    the property values of the events that can help you identify the event in the queue. You can also use the
+    Action parameter to specify actions to take when a subscribed event is raised.
+
+    When you subscribe to an event, an event subscriber is added to your session. To get the event
+    subscribers in the session, use the Get-EventSubscriber cmdlet. To cancel the subscription, use the
+    Unregister-Event cmdlet, which deletes the event subscriber from the session.
+
+    New Common Information Model (CIM) cmdlets, introduced Windows PowerShell 3.0, perform the same tasks as
+    the WMI cmdlets. The CIM cmdlets comply with WS-Management (WSMan) standards and with the CIM standard,
+    which enables the cmdlets to use the same techniques to manage computers that run the Windows operating
+    system and those that run other operating systems. Instead of using Register-WmiEvent , consider using
+    the Register-CimIndicationEventhttp://go.microsoft.com/fwlink/?LinkId=227960 cmdlet.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821613
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Register-WmiEvent -examples".
+    Para obtener más información, escriba: "get-help Register-WmiEvent -detailed".
+    Para obtener información técnica, escriba: "get-help Register-WmiEvent -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Register-WmiEvent -online"
+
+
+PS C:\Users\Usuario> help *event*log*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Clear-EventLog                    Cmdlet    Microsoft.PowerShell.M... Clears all entries from specified eve...
+Get-EventLog                      Cmdlet    Microsoft.PowerShell.M... Gets the events in an event log, or a...
+Limit-EventLog                    Cmdlet    Microsoft.PowerShell.M... Sets the event log properties that li...
+New-EventLog                      Cmdlet    Microsoft.PowerShell.M... Creates a new event log and a new eve...
+Remove-EventLog                   Cmdlet    Microsoft.PowerShell.M... Deletes an event log or unregisters a...
+Show-EventLog                     Cmdlet    Microsoft.PowerShell.M... Displays the event logs of the local ...
+Write-EventLog                    Cmdlet    Microsoft.PowerShell.M... Writes an event to an event log.
+about_Eventlogs                   HelpFile                            Windows PowerShell creates a Windows ...
+
+
+PS C:\Users\Usuario> help about_EventLogs
+TOPIC
+    about_EventLogs
+
+SHORT DESCRIPTION
+    Windows PowerShell creates a Windows event log that is 
+    named "Windows PowerShell" to record Windows PowerShell events. You can
+    view this log in Event Viewer or by using cmdlets that get events, such as
+    the Get-EventLog cmdlet. By default, Windows PowerShell engine and provider
+    events are recorded in the event log, but you can use the event log 
+    preference variables to customize the event log. For example, you can add
+    events about Windows PowerShell commands.
+
+
+LONG DESCRIPTION
+    The Windows PowerShell event log records details of Windows PowerShell 
+    operations, such as starting and stopping the program engine and starting
+    and stopping the Windows PowerShell providers. You can also log details 
+    about Windows PowerShell commands.
+
+
+    The Windows PowerShell event log is in the Application and Services Logs
+    group. The Windows PowerShell log is a classic event log that does not use
+    the Windows Eventing technology. To view the log, use the cmdlets designed
+    for classic event logs, such as Get-EventLog.
+
+
+  Viewing the Windows PowerShell Event Log
+
+      You can view the Windows PowerShell event log in Event Viewer or by 
+      using the Get-EventLog and Get-WmiObject cmdlets. To view the contents 
+      of the Windows PowerShell log, type:
+
+  Get-EventLog -LogName "Windows PowerShell"
+
+   
+      To examine the events and their properties, use the Sort-Object cmdlet,
+      the Group-Object cmdlet, and the cmdlets that contain the Format verb 
+      (the Format cmdlets).
+
+
+      For example, to view the events in the log grouped by the event ID, type:
+
+  Get-EventLog "Windows PowerShell" | Format-Table -GroupBy EventID
+
+
+      Or, type:
+
+  Get-EventLog "Windows PowerShell" | Sort-Object EventID `
+            | Group-Object EventID
+
+
+      To view all the classic event logs, type:
+
+  Get-EventLog -List
+
+    
+      You can also use the Get-WmiObject cmdlet to use the event-related 
+      Windows Management Instumentation (WMI) classes to examine the event log.
+      For example, to view all the properties of the event log file, type:
+
+  Get-WmiObject Win32_NTEventLogFile | where `
+            {$_.LogFileName -eq "Windows PowerShell"} | Format-List -Property * 
+
+
+      To find the Win32 event-related WMI classes, type:
+
+Get-WmiObject -List | where {$_.Name -like "win32*event*"}
+
+
+      For more information, type "Get-Help Get-EventLog" and 
+      "Get-Help Get-WmiObject".
+
+
+  Selecting Events for the Windows PowerShell Event Log
+
+      You can use the event log preference variables to determine which events
+      are recorded in the Windows PowerShell event log. 
+
+
+      There are six event log preference variables; two variables for each of 
+      the three logging components: the engine (the Windows PowerShell 
+      program), the providers, and the commands. The LifeCycleEvent variables
+      log normal starting and stopping events. The Health variables log error
+      events.
+
+
+      The following table lists the event log preference variables.
+
+          Variable                     Description
+          --------------------------   ----------------------------------------
+
+  $LogEngineLifeCycleEvent     Logs starting and stopping of
+                                       Windows PowerShell.
+
+  $LogEngineHealthEvent        Logs Windows PowerShell program errors.
+
+  $LogProviderLifeCycleEvent   Logs starting and stopping of 
+                                       Windows PowerShell providers.
+
+  $LogProviderHealthEvent      Logs Windows PowerShell provider errors.
+
+  $LogCommandLifeCycleEvent    Logs starting and completion of commands.
+
+  $LogCommandHealthEvent       Logs command errors.
+
+
+      (For information about Windows PowerShell providers, 
+      type: "Get-Help about_providers".)
+
+
+      By default, only the following event types are enabled:
+
+  $LogEngineLifeCycleEvent
+  $LogEngineHealthEvent
+  $LogProviderLifeCycleEvent
+  $LogProviderHealthEvent
+
+
+      To enable an event type, set the preference variable for that event type
+      to $true. For example, to enable command life-cycle events, type:
+
+  $LogCommandLifeCycleEvent
+
+
+      Or, type:
+
+  $LogCommandLifeCycleEvent = $true
+
+
+      To disable an event type, set the preference variable for that event type
+      to $false. For example, to disable command life-cycle events, type:
+
+  $LogProviderLifeCycleEvent = $false
+
+      You can disable any event, except for the events that indicate that the
+      Windows PowerShell engine and the core providers are started. These events
+      are generated before the Windows PowerShell profiles are run and before 
+      the host program is ready to accept commands.
+    
+      The variable settings apply only for the current Windows PowerShell 
+      session. To apply them to all Windows PowerShell sessions, add them to
+      your Windows PowerShell profile.
+
+
+  Logging Module Events
+
+    Beginning in Windows PowerShell 3.0, you can record execution events for the cmdlets
+    and functions in Windows PowerShell modules and snap-ins by setting the
+    LogPipelineExecutionDetails property of modules and snap-ins to TRUE. In Windows 
+    PowerShell 2.0, this feature is available only for snap-ins.
+
+    When the LogPipelineExecutionDetails property value is TRUE ($True), Windows PowerShell 
+    writes cmdlet and function execution events in the session to the Windows PowerShell
+    log in Event Viewer. The setting is effective only in the current session.
+
+    To enable logging of execution events of cmdlets and functions in a module, use the
+    following command sequence.
+        Import-Module <ModuleName>
+        $m = Get-Module <ModuleName>
+        $m.LogPipelineExecutionDetails = $True
+
+    To enable logging of execution events of cmdlets in a snap-in, use the following
+    command sequence.
+        $m = Get-PSSnapin <SnapInName> [-Registered]
+        $m.LogPipelineExecutionDetails = $True
+
+    To disable logging, use the same command sequence to set the property
+    value to FALSE ($False).
+
+    You can also use the "Turn on Module Logging" Group Policy setting to enable
+    and disable module and snap-in logging. The policy value includes a list of 
+    module and snap-in names. Wildcards are supported.
+
+    When "Turn on Module Logging" is set for a module, the value of the 
+    LogPipelineExecutionDetails property of the module is TRUE in all sessions 
+    and it cannot be changed.
+
+    The Turn On Module Logging group policy setting is located in the following
+    Group Policy paths:
+
+        Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell
+        User Configuration\Administrative Templates\Windows Components\Windows PowerShell
+
+    The User Configuration policy takes precedence over the Computer Configuration policy,
+    and both policies take preference over the value of the LogPipelineExecutionDetails 
+    property of modules and snap-ins.
+
+    For more information about this Group Policy setting, see about_Group_Policy_Settings
+    (http://go.microsoft.com/fwlink/?LinkID=251696).
+
+
+  Security and Auditing
+
+      The Windows PowerShell event log is designed to indicate activity and 
+      to provide operational details for troubleshooting. 
+
+
+      However, like most Windows-based application event logs, the 
+      Windows PowerShell event log is not designed to be secure. It should not
+      be used to audit security or to record confidential or proprietary 
+      information.
+
+
+      Event logs are designed to be read and understood by users. Users can 
+      read from and write to the log. A malicious user could read an event log
+      on a local or remote computer, record false data, and then prevent the
+      logging of their activities.
+
+
+NOTES
+    Authors of module authors can add logging features to
+    their modules. For more information, see "Writing a Windows PowerShell Module" in
+    MSDN at http://go.microsoft.com/fwlink/?LinkID=144916.
+
+
+SEE ALSO
+    Get-EventLog
+    Get-WmiObject
+    about_Group_Policy_Settings
+    about_Preference_Variables
+PS C:\Users\Usuario> help Get-EventLog
+
+NOMBRE
+    Get-EventLog
+
+SINOPSIS
+    Gets the events in an event log, or a list of the event logs, on the local or remote computers.
+
+
+SINTAXIS
+    Get-EventLog [-LogName] <String> [[-InstanceId] <Int64[]>] [-After <DateTime>] [-AsBaseObject] [-Before
+    <DateTime>] [-ComputerName <String[]>] [-EntryType {Error | Information | FailureAudit | SuccessAudit |
+    Warning}] [-Index <Int32[]>] [-Message <String>] [-Newest <Int32>] [-Source <String[]>] [-UserName
+    <String[]>] [<CommonParameters>]
+
+    Get-EventLog [-AsString] [-ComputerName <String[]>] [-List] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-EventLog cmdlet gets events and event logs on the local and remote computers.
+
+    You can use the parameters of this cmdlet to search for events by using their property values. This
+    cmdlet gets only the events that match all of the specified property values.
+
+    The cmdlets that contain the EventLog noun work only on classic event logs. To get events from logs that
+    use the Windows Event Log technology in Windows Vista and later versions of Windows, use Get-WinEvent.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821585
+    Clear-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-EventLog -examples".
+    Para obtener más información, escriba: "get-help Get-EventLog -detailed".
+    Para obtener información técnica, escriba: "get-help Get-EventLog -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-EventLog -online"
+
+
+PS C:\Users\Usuario> Get-EventLog -Index 100
+>> ErrorTerminación(Get-EventLog): "No existe el registro de eventos 'log' en el equipo '.'."
+Get-EventLog : No existe el registro de eventos 'log' en el equipo '.'.
+En línea: 1 Carácter: 1
++ Get-EventLog -Index 100
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-EventLog], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.PowerShell.Commands.GetEventLogCommand
+Get-EventLog : No existe el registro de eventos 'log' en el equipo '.'.
+En línea: 1 Carácter: 1
++ Get-EventLog -Index 100
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-EventLog], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.PowerShell.Commands.GetEventLogComma
+   nd
+
+PS C:\Users\Usuario> Get-EventLog -list
+
+  Max(K) Retain OverflowAction        Entries Log
+  ------ ------ --------------        ------- ---
+  20.480      0 OverwriteAsNeeded         493 Application
+  20.480      0 OverwriteAsNeeded           0 HardwareEvents
+     512      7 OverwriteOlder              0 Internet Explorer
+  20.480      0 OverwriteAsNeeded           0 Key Management Service
+     512      7 OverwriteOlder                Parameters
+                                              Security
+                                              State
+  20.480      0 OverwriteAsNeeded         864 System
+     512      0 OverwriteAsNeeded             ThinPrint Diagnostics
+  15.360      0 OverwriteAsNeeded          42 Windows PowerShell
+
+
+PS C:\Users\Usuario> Get-EventLog -Application
+>> ErrorTerminación(Get-EventLog): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Application'."
+Get-EventLog : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Application'.
+En línea: 1 Carácter: 14
++ Get-EventLog -Application
++              ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-EventLog], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetEventLogCommand
+Get-EventLog : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Application'.
+En línea: 1 Carácter: 14
++ Get-EventLog -Application
++              ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-EventLog], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetEventLogCommand
+
+PS C:\Users\Usuario> Get-EventLog -Newest 100
+
+   Index Time          EntryType   Source                 InstanceID Message
+   ----- ----          ---------   ------                 ---------- -------
+     493 ene. 29 08:12 Information Windows Error Rep...         1001 Depósito con errores 16673889060791264...
+     492 ene. 29 08:00 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     491 ene. 29 08:00 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     490 ene. 29 08:00 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     489 ene. 29 08:00 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     488 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     487 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     486 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     485 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     484 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     483 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     482 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     481 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     480 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     479 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     478 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     477 ene. 29 07:59 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     476 ene. 29 07:57 Information Windows Error Rep...         1001 Depósito con errores 12038305152949896...
+     475 ene. 29 07:55 Information Windows Error Rep...         1001 Depósito con errores 21623647475146210...
+     474 ene. 29 07:55 Error       Application Error            1000 Nombre de la aplicación con errores: s...
+     473 ene. 29 07:44 Information gupdate                         0 No se encontró la descripción del id. ...
+     472 ene. 29 07:42 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     471 ene. 29 07:42 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     470 ene. 29 07:42 Information Software Protecti...   1073758208 El servicio de protección de software ...
+     469 ene. 29 07:41 Information Software Protecti...   3221241866 La migración de nivel inferior sin con...
+     468 ene. 29 07:39 Information Microsoft-Windows...        10001 Finalizando sesión 0 iniciada 2020-01-...
+     467 ene. 29 07:39 Information Microsoft-Windows...        10000 Iniciando sesión 0 - 2020-01-29T12:39:...
+     466 ene. 29 07:39 Information MsiInstaller                 1042 Finalizando una transacción de Windows...
+     465 ene. 29 07:39 Information MsiInstaller                 1035 Windows Installer volvió a configurar ...
+     464 ene. 29 07:39 Information MsiInstaller                11728 Product: Google Update Helper -- Confi...
+     463 ene. 29 07:39 Information MsiInstaller                 1040 Iniciando una transacción de Windows I...
+     462 ene. 29 07:39 Information MsiInstaller                 1042 Finalizando una transacción de Windows...
+     461 ene. 29 07:39 Information MsiInstaller                 1035 Windows Installer volvió a configurar ...
+     460 ene. 29 07:39 Information MsiInstaller                11729 Product: Google Update Helper -- Confi...
+     459 ene. 29 07:39 Information MsiInstaller                 1040 Iniciando una transacción de Windows I...
+     458 ene. 29 07:36 Information Microsoft-Windows...         4097 Actualización automática correcta del ...
+     457 ene. 29 07:35 0           Software Protecti...   1073742727 Se detuvo el servicio de protección de...
+     456 ene. 29 07:35 Information Software Protecti...   1073758208 El servicio de protección de software ...
+     455 ene. 29 07:35 Information VSS                          8224 El servicio VSS se está cerrando por u...
+     454 ene. 29 07:35 0           Software Protecti...   1073742726 Se inició el servicio de protección de...
+     453 ene. 29 07:35 Information Software Protecti...   1073742827 El servicio de protección de software ...
+     452 ene. 29 07:35 Information Software Protecti...   1073742857 Se excluyeron las directivas porque so...
+     451 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     450 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     449 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     448 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     447 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     446 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     445 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     444 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     443 ene. 29 07:35 Information Software Protecti...   1073742858 Se encontró una definición duplicada d...
+     442 ene. 29 07:35 Information Software Protecti...   1073742890 Estado de inicialización para objetos ...
+     441 ene. 29 07:35 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     440 ene. 29 07:35 Information SecurityCenter                 15 El estado Windows Defender se actualiz...
+     439 ene. 29 07:35 Information Software Protecti...   3221241866 La migración de nivel inferior sin con...
+     438 ene. 29 07:35 Information SecurityCenter                  1 Se inició el Servicio de Centro de seg...
+     437 ene. 29 07:35 Information Software Protecti...   1073742724 Se está iniciando el servicio de prote...
+     436 ene. 29 07:34 Information Microsoft-Windows...         4097 Actualización automática correcta del ...
+     435 ene. 29 07:34 Information Microsoft-Windows...         4111 Actualización automática correcta de l...
+     434 ene. 29 07:34 Information Microsoft-Windows...         4109 Actualización automática correcta de p...
+     433 ene. 29 07:34 Information Microsoft-Windows...         4109 Actualización automática correcta de p...
+     432 ene. 29 07:34 Information Microsoft-Windows...         4109 Actualización automática correcta de p...
+     431 ene. 29 07:33 Information Windows Search Se...   1073742827 Se inició el servicio Windows Search....
+     430 ene. 29 07:33 Information ESENT                         326 SearchIndexer (4272,D,50) Windows: The...
+     429 ene. 29 07:33 Information ESENT                         105 SearchIndexer (4272,D,0) Windows: The ...
+     428 ene. 29 07:33 Information ESENT                         102 SearchIndexer (4272,P,98) Windows: El ...
+     427 ene. 29 07:32 Information Wlclntfy               2147489648 El suscriptor de notificaciones winlog...
+     426 ene. 29 07:32 Information Wlclntfy               2147489651 El suscriptor de notificaciones winlog...
+     425 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 13693319471964354...
+     424 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 14310486617719580...
+     423 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 15395780271005909...
+     422 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 14310486617719580...
+     421 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 12293648937945856...
+     420 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 14310486617719580...
+     419 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 13693319471964354...
+     418 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 12293648937945856...
+     417 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 13608140968079401...
+     416 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 15395780271005909...
+     415 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 19797244037566101...
+     414 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 12293648937945856...
+     413 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 19975588799382713...
+     412 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 22622402576921641...
+     411 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 21924690742350733...
+     410 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 16644155039930093...
+     409 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 14310486617719580...
+     408 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 15150816736552377...
+     407 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 17095779334081817...
+     406 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 16866856115979842...
+     405 ene. 29 07:32 Information Windows Error Rep...         1001 Depósito con errores 19463234588270053...
+     404 ene. 29 07:32 Information VMUpgradeHelper               271 Restored network configuration.
+     403 ene. 29 07:32 Information VMUpgradeHelper               258 Restoring network configuration.
+     402 ene. 29 07:32 Information Microsoft-Windows...         5617 Los subsistemas del servicio Instrumen...
+     401 ene. 29 07:32 Information MSDTC 2                1073746026 No se encontró la descripción del id. ...
+     400 ene. 29 07:32 Information COM+                   1073742605 No se encontró la descripción del id. ...
+     399 ene. 29 07:32 Information Microsoft-Windows...         5615 El servicio Instrumental de administra...
+     398 ene. 29 07:32 Information VMTools                       105 The service was started.
+     397 ene. 29 07:32 Information Microsoft-Windows...         1531 El Servicio de perfiles de usuario se ...
+     396 ene. 29 07:32 Information EventSystem            1073746449 No se encontró la descripción del id. ...
+     395 ene. 29 07:32 Information Microsoft-Windows...         1532 El Servicio de perfiles de usuario se ...
+     394 ene. 29 07:32 Information VMTools                       108 The service was stopped.
+
+
+PS C:\Users\Usuario> Get-EventLog -Newest 100
+>> ErrorTerminación(Get-EventLog): "Acceso denegado al Registro solicitado."
+Get-EventLog : Acceso denegado al Registro solicitado.
+En línea: 1 Carácter: 1
++ Get-EventLog -Newest 100
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-EventLog], SecurityException
+    + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetEventLogCommand
+Get-EventLog : Acceso denegado al Registro solicitado.
+En línea: 1 Carácter: 1
++ Get-EventLog -Newest 100
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-EventLog], SecurityException
+    + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetEventLogComm
+   and
+
+PS C:\Users\Usuario> help *service*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Get-Service                       Cmdlet    Microsoft.PowerShell.M... Gets the services on a local or remot...
+New-Service                       Cmdlet    Microsoft.PowerShell.M... Creates a new Windows service.
+New-WebServiceProxy               Cmdlet    Microsoft.PowerShell.M... Creates a Web service proxy object th...
+Restart-Service                   Cmdlet    Microsoft.PowerShell.M... Stops and then starts one or more ser...
+Resume-Service                    Cmdlet    Microsoft.PowerShell.M... Resumes one or more suspended (paused...
+Set-Service                       Cmdlet    Microsoft.PowerShell.M... Starts, stops, and suspends a service...
+Start-Service                     Cmdlet    Microsoft.PowerShell.M... Starts one or more stopped services.
+Stop-Service                      Cmdlet    Microsoft.PowerShell.M... Stops one or more running services.
+Suspend-Service                   Cmdlet    Microsoft.PowerShell.M... Suspends (pauses) one or more running...
+Get-NetFirewallServiceFilter      Function  NetSecurity               ...
+Set-NetFirewallServiceFilter      Function  NetSecurity               ...
+
+
+PS C:\Users\Usuario> help Get-Service
+
+NOMBRE
+    Get-Service
+
+SINOPSIS
+    Gets the services on a local or remote computer.
+
+
+SINTAXIS
+    Get-Service [-ComputerName <String[]>] [-DependentServices] -DisplayName <String[]> [-Exclude <String[]>]
+    [-Include <String[]>] [-RequiredServices] [<CommonParameters>]
+
+    Get-Service [-ComputerName <String[]>] [-DependentServices] [-Exclude <String[]>] [-Include <String[]>]
+    [-InputObject <ServiceController[]>] [-RequiredServices] [<CommonParameters>]
+
+    Get-Service [[-Name] <String[]>] [-ComputerName <String[]>] [-DependentServices] [-Exclude <String[]>]
+    [-Include <String[]>] [-RequiredServices] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Service cmdlet gets objects that represent the services on a local computer or on a remote
+    computer, including running and stopped services.
+
+    You can direct this cmdlet to get only particular services by specifying the service name or display name
+    of the services, or you can pipe service objects to this cmdlet.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821593
+    New-Service
+    Restart-Service
+    Resume-Service
+    Set-Service
+    Start-Service
+    Stop-Service
+    Suspend-Service
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-Service -examples".
+    Para obtener más información, escriba: "get-help Get-Service -detailed".
+    Para obtener información técnica, escriba: "get-help Get-Service -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-Service -online"
+
+
+PS C:\Users\Usuario> Get-Service -ComputerName localhost
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  AJRouter           Servicio de enrutador de AllJoyn
+Stopped  ALG                Servicio de puerta de enlace de niv...
+Stopped  AppIDSvc           Identidad de aplicación
+Running  Appinfo            Información de la aplicación
+Stopped  AppMgmt            Administración de aplicaciones
+Stopped  AppReadiness       Preparación de aplicaciones
+Stopped  AppVClient         Microsoft App-V Client
+Stopped  AppXSvc            Servicio de implementación de AppX ...
+Stopped  AssignedAccessM... Servicio AssignedAccessManager
+Running  AudioEndpointBu... Compilador de extremo de audio de W...
+Running  Audiosrv           Audio de Windows
+Stopped  AxInstSV           Instalador de ActiveX (AxInstSV)
+Stopped  BcastDVRUserSer... Servicio de usuario de difusión y G...
+Stopped  BDESVC             Servicio Cifrado de unidad BitLocker
+Running  BFE                Motor de filtrado de base
+Running  BITS               Servicio de transferencia inteligen...
+Stopped  BluetoothUserSe... Servicio de soporte técnico de usua...
+Running  BrokerInfrastru... Servicio de infraestructura de tare...
+Stopped  BTAGService        Servicio de puerta de enlace de aud...
+Stopped  BthAvctpSvc        Servicio AVCTP
+Stopped  bthserv            Servicio de compatibilidad con Blue...
+Running  camsvc             Servicio Administrador de funcional...
+Stopped  CaptureService_... CaptureService_3c18a
+Running  cbdhsvc_3c18a      Servicio de usuario del portapapele...
+Running  CDPSvc             Servicio de plataforma de dispositi...
+Running  CDPUserSvc_3c18a   Servicio de usuario de plataforma d...
+Stopped  CertPropSvc        Propagación de certificados
+Running  ClipSVC            Servicio de licencia de cliente (Cl...
+Running  COMSysApp          Aplicación del sistema COM+
+Stopped  ConsentUxUserSv... ConsentUX_3c18a
+Running  CoreMessagingRe... CoreMessaging
+Running  CryptSvc           Servicios de cifrado
+Stopped  CscService         Archivos sin conexión
+Running  DcomLaunch         Iniciador de procesos de servidor DCOM
+Stopped  defragsvc          Optimizar unidades
+Stopped  DeviceAssociati... Servicio de asociación de dispositivos
+Stopped  DeviceInstall      Servicio de instalación de disposit...
+Stopped  DevicePickerUse... DevicePicker_3c18a
+Stopped  DevicesFlowUser... DevicesFlow_3c18a
+Stopped  DevQueryBroker     Agente de detección en segundo plan...
+Running  Dhcp               Cliente DHCP
+Stopped  diagnosticshub.... Servicio Recopilador estándar del c...
+Stopped  diagsvc            Diagnostic Execution Service
+Running  DiagTrack          Telemetría y experiencias del usuar...
+Stopped  DisplayEnhancem... Servicio de mejora de visualización
+Stopped  DmEnrollmentSvc    Servicio de inscripción de administ...
+Stopped  dmwappushservice   Servicio de enrutamiento de mensaje...
+Running  Dnscache           Cliente DNS
+Stopped  DoSvc              Optimización de entrega
+Stopped  dot3svc            Configuración automática de redes c...
+Running  DPS                Servicio de directivas de diagnóstico
+Stopped  DsmSvc             Administrador de configuración de d...
+Stopped  DsSvc              Servicio de uso compartido de datos
+Running  DusmSvc            Uso de datos
+Stopped  Eaphost            Protocolo de autenticación extensible
+Stopped  EFS                Sistema de cifrado de archivos (EFS)
+Stopped  embeddedmode       Modo incrustado
+Stopped  EntAppSvc          Servicio de administración de aplic...
+Running  EventLog           Registro de eventos de Windows
+Running  EventSystem        Sistema de eventos COM+
+Stopped  Fax                Fax
+Stopped  fdPHost            Host de proveedor de detección de f...
+Stopped  FDResPub           Publicación de recurso de detección...
+Stopped  fhsvc              Servicio de historial de archivos
+Running  FontCache          Servicio de caché de fuentes de Win...
+Stopped  FrameServer        Servicio FrameServer de la Cámara d...
+Stopped  GoogleChromeEle... Google Chrome Elevation Service
+Stopped  gpsvc              Cliente de directiva de grupo
+Stopped  GraphicsPerfSvc    GraphicsPerfSvc
+Stopped  gupdate            Google Update Servicio (gupdate)
+Stopped  gupdatem           Google Update Servicio (gupdatem)
+Stopped  hidserv            Servicio de dispositivo de interfaz...
+Stopped  icssvc             Servicio de zona con cobertura inal...
+Stopped  IKEEXT             Módulos de creación de claves de IP...
+Stopped  InstallService     Servicio de instalación de Microsof...
+Running  iphlpsvc           Aplicación auxiliar IP
+Stopped  IpxlatCfgSvc       Servicio de configuración de trasla...
+Stopped  irmon              Servicio de monitor de infrarrojos
+Running  KeyIso             Aislamiento de claves CNG
+Stopped  KtmRm              KTMRM para DTC (Coordinador de tran...
+Running  LanmanServer       Servidor
+Running  LanmanWorkstation  Estación de trabajo
+Stopped  lfsvc              Servicio de geolocalización
+Running  LicenseManager     Servicio de administrador de licenc...
+Stopped  lltdsvc            Asignador de detección de topología...
+Running  lmhosts            Aplicación auxiliar de NetBIOS sobr...
+Running  LSM                Administrador de sesión local
+Stopped  LxpSvc             Servicio de experiencia de idioma
+Stopped  MapsBroker         Administrador de mapas descargados
+Stopped  MessagingServic... MessagingService_3c18a
+Running  mpssvc             Firewall de Windows Defender
+Running  MSDTC              Coordinador de transacciones distri...
+Stopped  MSiSCSI            Servicio del iniciador iSCSI de Mic...
+Stopped  msiserver          Windows Installer
+Stopped  NaturalAuthenti... Autenticación natural
+Stopped  NcaSvc             Asistente para la conectividad de red
+Running  NcbService         Agente de conexión de red
+Stopped  NcdAutoSetup       Configuración automática de disposi...
+Stopped  Netlogon           Net Logon
+Stopped  Netman             Conexiones de red
+Running  netprofm           Servicio de lista de redes
+Stopped  NetSetupSvc        Servicio de configuración de red
+Stopped  NetTcpPortSharing  Servicio de uso compartido de puert...
+Stopped  NgcCtnrSvc         Contenedor de Microsoft Passport
+Stopped  NgcSvc             Microsoft Passport
+Running  NlaSvc             Reconoc. ubicación de red
+Running  nsi                Servicio Interfaz de almacenamiento...
+Running  OneSyncSvc_3c18a   Sincronizar host_3c18a
+Stopped  p2pimsvc           Administrador de identidad de redes...
+Stopped  p2psvc             Agrupación de red del mismo nivel
+Running  PcaSvc             Servicio Asistente para la compatib...
+Stopped  PeerDistSvc        BranchCache
+Stopped  perceptionsimul... Servicio de simulación de percepció...
+Running  PhoneSvc           Servicio telefónico
+Running  PimIndexMainten... Datos de contactos_3c18a
+Stopped  pla                Registros y alertas de rendimiento
+Running  PlugPlay           Plug and Play
+Stopped  PNRPAutoReg        Servicio de publicación de nombres ...
+Stopped  PNRPsvc            Protocolo de resolución de nombres ...
+Stopped  PolicyAgent        Agente de directiva IPsec
+Running  Power              Energía
+Stopped  PrintNotify        Extensiones y notificaciones de imp...
+Stopped  PrintWorkflowUs... PrintWorkflow_3c18a
+Running  ProfSvc            Servicio de perfil de usuario
+Stopped  PushToInstall      Servicio PushToInstall de Windows
+Stopped  QWAVE              Experiencia de calidad de audio y v...
+Stopped  RasAuto            Administrador de conexiones automát...
+Stopped  RasMan             Administrador de conexiones de acce...
+Stopped  RemoteAccess       Enrutamiento y acceso remoto
+Stopped  RemoteRegistry     Registro remoto
+Stopped  RetailDemo         Servicio de prueba comercial
+Stopped  RmSvc              Servicio de administración de radio
+Running  RpcEptMapper       Asignador de extremos de RPC
+Stopped  RpcLocator         Ubicador de llamada a procedimiento...
+Running  RpcSs              Llamada a procedimiento remoto (RPC)
+Running  SamSs              Administrador de cuentas de seguridad
+Stopped  SCardSvr           Tarjeta inteligente
+Stopped  ScDeviceEnum       Servicio de enumeración de disposit...
+Running  Schedule           Programador de tareas
+Stopped  SCPolicySvc        Directiva de extracción de tarjetas...
+Stopped  SDRSVC             Copias de seguridad de Windows
+Stopped  seclogon           Inicio de sesión secundario
+Running  SecurityHealthS... Servicio Seguridad de Windows
+Running  SEMgrSvc           Administrador de pagos y NFC/SE
+Running  SENS               Servicio de notificación de eventos...
+Stopped  Sense              Servicio de Protección contra amena...
+Stopped  SensorDataService  Servicio de datos del sensor
+Stopped  SensorService      Servicio de sensores
+Stopped  SensrSvc           Servicio de supervisión de sensores
+Stopped  SessionEnv         Configuración de Escritorio remoto
+Stopped  SharedAccess       Conexión compartida a Internet (ICS)
+Stopped  SharedRealitySvc   Servicio de datos espacial
+Running  ShellHWDetection   Detección de hardware shell
+Stopped  shpamsvc           Shared PC Account Manager
+Stopped  smphost            SMP de Espacios de almacenamiento d...
+Stopped  SmsRouter          Servicio enrutador de SMS de Micros...
+Stopped  SNMPTRAP           Captura de SNMP
+Stopped  spectrum           Servicio de percepción de Windows
+Running  Spooler            Cola de impresión
+Stopped  sppsvc             Protección de software
+Running  SSDPSRV            Detección SSDP
+Stopped  ssh-agent          OpenSSH Authentication Agent
+Stopped  SstpSvc            Servicio de protocolo de túnel de s...
+Running  StateRepository    Servicio de repositorio de estado
+Stopped  StiSvc             Adquisición de imágenes de Windows ...
+Running  StorSvc            Servicio de almacenamiento
+Stopped  svsvc              Comprobador puntual
+Running  swprv              Proveedor de instantáneas de softwa...
+Running  SysMain            SysMain
+Running  SystemEventsBroker Agente de eventos del sistema
+Running  TabletInputService Servicio de Panel de escritura a ma...
+Stopped  tapisrv            Telefonía
+Stopped  TermService        Servicios de Escritorio remoto
+Running  Themes             Temas
+Stopped  TieringEngineSe... Administración de capas de almacena...
+Running  TimeBrokerSvc      Agente de eventos de tiempo
+Running  TokenBroker        Administrador de cuentas web
+Running  TrkWks             Cliente de seguimiento de vínculos ...
+Stopped  TrustedInstaller   Instalador de módulos de Windows
+Stopped  tzautoupdate       Actualizador de zona horaria automá...
+Stopped  UevAgentService    Servicio de virtualización de la ex...
+Stopped  UmRdpService       Redirector de puerto en modo usuari...
+Running  UnistoreSvc_3c18a  Almacenamiento de datos de usuarios...
+Stopped  upnphost           Dispositivo host de UPnP
+Running  UserDataSvc_3c18a  Acceso a datos de usuarios_3c18a
+Running  UserManager        Administrador de usuarios
+Running  UsoSvc             Update Orchestrator Service
+Stopped  VacSvc             Servicio Volumetric Audio Compositor
+Running  VaultSvc           Administrador de credenciales
+Stopped  vds                Disco virtual
+Running  VGAuthService      VMware Alias Manager and Ticket Ser...
+Stopped  vmicguestinterface Interfaz de servicio invitado de Hy...
+Stopped  vmicheartbeat      Servicio de latido de Hyper-V
+Stopped  vmickvpexchange    Servicio de intercambio de datos de...
+Stopped  vmicrdv            Servicio de virtualización de Escri...
+Stopped  vmicshutdown       Servicio de cierre de invitado de H...
+Stopped  vmictimesync       Servicio de sincronización de hora ...
+Stopped  vmicvmsession      Servicio PowerShell Direct de Hyper-V
+Stopped  vmicvss            Solicitante de instantáneas de volu...
+Running  VMTools            VMware Tools
+Stopped  vmvss              VMware Snapshot Provider
+Running  VMware Physical... Servicio auxiliar de disco físico d...
+Stopped  VSS                Instantáneas de volumen
+Stopped  W32Time            Hora de Windows
+Stopped  WaaSMedicSvc       Windows Update Medic Service
+Stopped  WalletService      WalletService
+Stopped  WarpJITSvc         WarpJITSvc
+Stopped  wbengine           Servicio del módulo de copia de seg...
+Stopped  WbioSrvc           Servicio biométrico de Windows
+Running  Wcmsvc             Administrador de conexiones de Windows
+Stopped  wcncsvc            Registrador de configuración de Win...
+Running  WdiServiceHost     Host del servicio de diagnóstico
+Running  WdiSystemHost      Host de sistema de diagnóstico
+Running  WdNisSvc           Servicio de inspección de red de An...
+Stopped  WebClient          Cliente web
+Stopped  Wecsvc             Recopilador de eventos de Windows
+Stopped  WEPHOSTSVC         Servicio host de proveedor de cifra...
+Stopped  wercplsupport      Ayuda del Panel de control de Infor...
+Stopped  WerSvc             Servicio Informe de errores de Windows
+Stopped  WFDSConMgrSvc      Servicio de administrador de conexi...
+Stopped  WiaRpc             Eventos de adquisición de imágenes ...
+Running  WinDefend          Servicio de Antivirus de Windows De...
+Running  WinHttpAutoProx... Servicio de detección automática de...
+Running  winmgmt            Instrumental de administración de W...
+Stopped  WinRM              Administración remota de Windows (W...
+Stopped  wisvc              Servicio de Windows Insider
+Stopped  Wlansvc            Configuración automática de WLAN
+Running  wlidsvc            Ayudante para el inicio de sesión d...
+Stopped  wlpasvc            Servicio de asistente para perfil l...
+Stopped  WManSvc            Servicio de administración de Windows
+Running  wmiApSrv           Adaptador de rendimiento de WMI
+Stopped  WMPNetworkSvc      Servicio de uso compartido de red d...
+Stopped  workfolderssvc     Carpetas de trabajo
+Stopped  WpcMonSvc          Control parental
+Stopped  WPDBusEnum         Servicio enumerador de dispositivos...
+Running  WpnService         Servicio del sistema de notificacio...
+Running  WpnUserService_... Servicio de usuario de notificacion...
+Running  wscsvc             Centro de seguridad
+Running  WSearch            Windows Search
+Running  wuauserv           Windows Update
+Stopped  WwanSvc            Configuración automática de WWAN
+Stopped  XblAuthManager     Administración de autenticación de ...
+Stopped  XblGameSave        Partida guardada en Xbox Live
+Stopped  XboxGipSvc         Xbox Accessory Management Service
+Stopped  XboxNetApiSvc      XboxNetApiSvc
+
+
+PS C:\Users\Usuario> help Get-Process
+
+NOMBRE
+    Get-Process
+
+SINOPSIS
+    Gets the processes that are running on the local computer or a remote computer.
+
+
+SINTAXIS
+    Get-Process [[-Name] <String[]>] [-ComputerName <String[]>] [-FileVersionInfo] [-Module]
+    [<CommonParameters>]
+
+    Get-Process [-ComputerName <String[]>] [-FileVersionInfo] -Id <Int32[]> [-Module] [<CommonParameters>]
+
+    Get-Process [-ComputerName <String[]>] [-FileVersionInfo] -InputObject <Process[]> [-Module]
+    [<CommonParameters>]
+
+    Get-Process -Id <Int32[]> -IncludeUserName [<CommonParameters>]
+
+    Get-Process [[-Name] <String[]>] -IncludeUserName [<CommonParameters>]
+
+    Get-Process -IncludeUserName -InputObject <Process[]> [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Process cmdlet gets the processes on a local or remote computer.
+
+    Without parameters, this cmdlet gets all of the processes on the local computer. You can also specify a
+    particular process by process name or process ID (PID) or pass a process object through the pipeline to
+    this cmdlet.
+
+    By default, this cmdlet returns a process object that has detailed information about the process and
+    supports methods that let you start and stop the process. You can also use the parameters of the
+    Get-Process cmdlet to get file version information for the program that runs in the process and to get
+    the modules that the process loaded.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?linkid=821590
+    Debug-Process
+    Get-Process
+    Start-Process
+    Stop-Process
+    Wait-Process
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-Process -examples".
+    Para obtener más información, escriba: "get-help Get-Process -detailed".
+    Para obtener información técnica, escriba: "get-help Get-Process -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-Process -online"
+
+
+PS C:\Users\Usuario> Get-Process -ComputerName localhost
+>> ErrorTerminación(Get-Process): "No se puede conectar al equipo remoto."
+Get-Process : No se puede conectar al equipo remoto.
+En línea: 1 Carácter: 1
++ Get-Process -ComputerName localhost
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-Process], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.PowerShell.Commands.GetProcessCommand
+Get-Process : No se puede conectar al equipo remoto.
+En línea: 1 Carácter: 1
++ Get-Process -ComputerName localhost
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-Process], InvalidOperationException
+    + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.PowerShell.Commands.GetProcessComman
+   d
+
+PS C:\Users\Usuario> help out-file
+
+NOMBRE
+    Out-File
+
+SINOPSIS
+    Sends output to a file.
+
+
+SINTAXIS
+    Out-File [-FilePath] <String> [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 |
+    utf32 | ascii | default | oem}] [-Append] [-Confirm] [-Force] [-InputObject <PSObject>] [-NoClobber]
+    [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]
+
+    Out-File [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii |
+    default | oem}] [-Append] [-Confirm] [-Force] [-InputObject <PSObject>] -LiteralPath <String>
+    [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Out-File cmdlet sends output to a file. You can use this cmdlet instead of the redirection operator
+    (>) when you need to use its parameters.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821839
+    Out-GridView
+    Out-Printer
+    Out-String
+    Tee-Object
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Out-File -examples".
+    Para obtener más información, escriba: "get-help Out-File -detailed".
+    Para obtener información técnica, escriba: "get-help Out-File -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Out-File -online"
+
+
+PS C:\Users\Usuario> help out-file -Full
+
+NOMBRE
+    Out-File
+
+SINOPSIS
+    Sends output to a file.
+
+
+SINTAXIS
+    Out-File [-FilePath] <String> [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 |
+    utf32 | ascii | default | oem}] [-Append] [-Confirm] [-Force] [-InputObject <PSObject>] [-NoClobber]
+    [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]
+
+    Out-File [[-Encoding] {unknown | string | unicode | bigendianunicode | utf8 | utf7 | utf32 | ascii |
+    default | oem}] [-Append] [-Confirm] [-Force] [-InputObject <PSObject>] -LiteralPath <String>
+    [-NoClobber] [-NoNewline] [-WhatIf] [-Width <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Out-File cmdlet sends output to a file. You can use this cmdlet instead of the redirection operator
+    (>) when you need to use its parameters.
+
+
+PARÁMETROS
+    -Append [<SwitchParameter>]
+        Indicates that the cmdlet adds the output to the end of an existing file, instead of replacing the
+        file contents.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Encoding <String>
+        Specifies the type of character encoding used in the file. The acceptable values for this parameter
+        are:
+
+        - Unknown
+
+        - String
+
+        - Unicode
+
+        - BigEndianUnicode
+
+        - UTF8
+
+        - UTF7
+
+        - UTF32
+
+        - ASCII
+
+        - Default
+
+        - OEM
+
+
+        Unicode is the default.
+
+        Default uses the encoding of the system's current ANSI code page.
+        OEM uses the current original equipment manufacturer code page identifier for the operating system.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -FilePath <String>
+        Specifies the path to the output file.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Indicates that the cmdlet overwrites an existing read-only file. Even using the Force parameter, the
+        cmdlet cannot override security restrictions.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -InputObject <PSObject>
+        Specifies the objects to be written to the file. Enter a variable that contains the objects or type a
+        command or expression that gets the objects.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -LiteralPath <String>
+        Specifies the path to the output file. Unlike FilePath , the value of the LiteralPath parameter is
+        used exactly as it is typed. No characters are interpreted as wildcards. If the path includes escape
+        characters, enclose it in single quotation marks. Single quotation marks tell Windows PowerShell not
+        to interpret any characters as escape sequences.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -NoClobber [<SwitchParameter>]
+        Indicates that the cmdlet will not overwrite an existing file. By default, if a file exists in the
+        specified path, Out-File overwrites the file without warning. If both Append and NoClobber are used,
+        the output is appended to the existing file.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -NoNewline [<SwitchParameter>]
+        @{Text=}
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Width <Int32>
+        Specifies the number of characters in each line of output. Any additional characters are truncated,
+        not wrapped. If you omit this parameter, the width is determined by the characteristics of the host.
+        The default for the Windows PowerShell console is 80 characters.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    System.Management.Automation.PSObject
+        You can pipe any object to this cmdlet.
+
+
+SALIDAS
+    None
+        Out-File does not generate any output.
+
+
+NOTAS
+
+
+        * The Out cmdlets do not format objects; they just render them and send them to the specified display
+        destination. If you send an unformatted object to an Out cmdlet, the cmdlet sends it to a formatting
+        cmdlet before rendering it.
+
+        The Out cmdlets do not have parameters for names or file paths. To send data to a cmdlet that
+        contains the Out verb (an Out cmdlet), use a pipeline operator (|) to send the output of a Windows
+        PowerShell command to the cmdlet. You can also store data in a variable and use the InputObject
+        parameter to pass the data to the cmdlet. For help, see the examples. Out-File sends data, but it
+        does not emit any output objects. If you pipe the output of Out-File to Get-Member, Get-Member
+        reports that no objects have been specified.
+
+        *
+
+    Example 1: Send output to a file
+
+    PS C:\>Get-Process | Out-File -filepath C:\Test1\process.txt
+
+    This command sends a list of processes on the computer to the Process.txt file. If the file does not
+    exist, Out-File creates it. Because the name of the FilePath parameter is optional, you can omit it and
+    submit the equivalent command `Get-Process | Outfile C:\Test1\process.txt`.
+    Example 2: Send output to a file without overwriting
+
+    PS C:\>Get-Process | Out-File C:\Test1\process.txt -NoClobber
+
+    Out-File : File C:\Test1\process.txt already exists and NoClobber was specified.
+    At line:1 char:23
+    + Get-Process | Out-File  <<<< process.txt -NoClobber
+
+    This command sends a list of processes to the Process.txt file, but it uses the NoClobber parameter,
+    which prevents an existing file from being overwritten. The output shows the error message that appears
+    when NoClobber is used with an existing file.
+    Example 3: Send output to a file in ASCII format
+
+    PS C:\>$A = Get-Process
+    PS C:\>Out-File -FilePath C:\Test1\process.txt -InputObject $A -Encoding ASCII -Width 50
+
+    These commands send a list of processes on the computer to the Process.txt file. The text is encoded in
+    ASCII format so that it can be read by search programs like Findstr and Grep. By default, Out-File uses
+    Unicode format.
+
+    The first command gets the list of processes and stores them in the $A variable. The second command uses
+    the Out-File cmdlet to send the list to the Process.txt file.
+
+    The command uses the InputObject parameter to specify that the input is in the $A variable. It uses the
+    Encoding parameter to convert the output to ASCII format. It uses the Width parameter to limit each line
+    in the file to 50 characters. Because the lines of output are truncated at 50 characters, the rightmost
+    column in the process table is omitted.
+    Example 4: Send output from outside a file system drive
+
+    PS C:\>Set-Location hklm:\software
+    PS C:\>Get-Acl mycompany\mykey | Out-File -FilePath c:\ps\acl.txt
+    PS C:\>Get-Acl mycompany\mykey | Out-File -FilePath filesystem::acl.txt
+
+    These commands show how to use the Out-File cmdlet when you are not in a FileSystem drive.
+
+    The first command sets the current location to the HKLM:\Software registry key.
+
+    The second and third commands have the same effect. They use the Get-Acl cmdlet to get the security
+    descriptor of the MyKey registry subkey (HKLM\Software\MyCompany\MyKey). A pipeline operator passes the
+    result to the Out-File cmdlet, which sends it to the Acl.txt file.
+
+    Because Out-File is not supported by the Windows PowerShell Registry provider, you must specify either
+    the file system drive name, such as c:, or the name of the provider followed by two colons, FileSystem::,
+    in the value of the FilePath parameter. The second and third commands demonstrate these methods.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821839
+    Out-GridView
+    Out-Printer
+    Out-String
+    Tee-Object
+
+
+
+PS C:\Users\Usuario> help Out-File -Path
+>> ErrorTerminación(help): "Falta un argumento para el parámetro 'Path'. Especifique un parámetro del tipo 'System.String' e inténtelo de nuevo."
+help : Falta un argumento para el parámetro 'Path'. Especifique un parámetro del tipo 'System.String' e inténtelo de 
+nuevo.
+En línea: 1 Carácter: 15
++ help Out-File -Path
++               ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,help
+help : Falta un argumento para el parámetro 'Path'. Especifique un parámetro del tipo 'System.String' e
+inténtelo de nuevo.
+En línea: 1 Carácter: 15
++ help Out-File -Path
++               ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,help
+
+PS C:\Users\Usuario> alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           asnp -> Add-PSSnapin
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           CFS -> ConvertFrom-String                          3.1.0.0    Microsoft.PowerShell.Utility
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clear -> Clear-Host
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+Alias           cls -> Clear-Host
+Alias           clv -> Clear-Variable
+Alias           cnsn -> Connect-PSSession
+Alias           compare -> Compare-Object
+Alias           copy -> Copy-Item
+Alias           cp -> Copy-Item
+Alias           cpi -> Copy-Item
+Alias           cpp -> Copy-ItemProperty
+Alias           curl -> Invoke-WebRequest
+Alias           cvpa -> Convert-Path
+Alias           dbp -> Disable-PSBreakpoint
+Alias           del -> Remove-Item
+Alias           diff -> Compare-Object
+Alias           dir -> Get-ChildItem
+Alias           dnsn -> Disconnect-PSSession
+Alias           ebp -> Enable-PSBreakpoint
+Alias           echo -> Write-Output
+Alias           epal -> Export-Alias
+Alias           epcsv -> Export-Csv
+Alias           epsn -> Export-PSSession
+Alias           erase -> Remove-Item
+Alias           etsn -> Enter-PSSession
+Alias           exsn -> Exit-PSSession
+Alias           fc -> Format-Custom
+Alias           fhx -> Format-Hex                                  3.1.0.0    Microsoft.PowerShell.Utility
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           ghy -> Get-History
+Alias           gi -> Get-Item
+Alias           gin -> Get-ComputerInfo                            3.1.0.0    Microsoft.PowerShell.Management
+Alias           gjb -> Get-Job
+Alias           gl -> Get-Location
+Alias           gm -> Get-Member
+Alias           gmo -> Get-Module
+Alias           gp -> Get-ItemProperty
+Alias           gps -> Get-Process
+Alias           gpv -> Get-ItemPropertyValue
+Alias           group -> Group-Object
+Alias           gsn -> Get-PSSession
+Alias           gsnp -> Get-PSSnapin
+Alias           gsv -> Get-Service
+Alias           gtz -> Get-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           gu -> Get-Unique
+Alias           gv -> Get-Variable
+Alias           gwmi -> Get-WmiObject
+Alias           h -> Get-History
+Alias           history -> Get-History
+Alias           icm -> Invoke-Command
+Alias           iex -> Invoke-Expression
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+Alias           ipal -> Import-Alias
+Alias           ipcsv -> Import-Csv
+Alias           ipmo -> Import-Module
+Alias           ipsn -> Import-PSSession
+Alias           irm -> Invoke-RestMethod
+Alias           ise -> powershell_ise.exe
+Alias           iwmi -> Invoke-WmiMethod
+Alias           iwr -> Invoke-WebRequest
+Alias           kill -> Stop-Process
+Alias           lp -> Out-Printer
+Alias           ls -> Get-ChildItem
+Alias           man -> help
+Alias           md -> mkdir
+Alias           measure -> Measure-Object
+Alias           mi -> Move-Item
+Alias           mount -> New-PSDrive
+Alias           move -> Move-Item
+Alias           mp -> Move-ItemProperty
+Alias           mv -> Move-Item
+Alias           nal -> New-Alias
+Alias           ndr -> New-PSDrive
+Alias           ni -> New-Item
+Alias           nmo -> New-Module
+Alias           npssc -> New-PSSessionConfigurationFile
+Alias           nsn -> New-PSSession
+Alias           nv -> New-Variable
+Alias           ogv -> Out-GridView
+Alias           oh -> Out-Host
+Alias           popd -> Pop-Location
+Alias           ps -> Get-Process
+Alias           pushd -> Push-Location
+Alias           pwd -> Get-Location
+Alias           r -> Invoke-History
+Alias           rbp -> Remove-PSBreakpoint
+Alias           rcjb -> Receive-Job
+Alias           rcsn -> Receive-PSSession
+Alias           rd -> Remove-Item
+Alias           rdr -> Remove-PSDrive
+Alias           ren -> Rename-Item
+Alias           ri -> Remove-Item
+Alias           rjb -> Remove-Job
+Alias           rm -> Remove-Item
+Alias           rmdir -> Remove-Item
+Alias           rmo -> Remove-Module
+Alias           rni -> Rename-Item
+Alias           rnp -> Rename-ItemProperty
+Alias           rp -> Remove-ItemProperty
+Alias           rsn -> Remove-PSSession
+Alias           rsnp -> Remove-PSSnapin
+Alias           rujb -> Resume-Job
+Alias           rv -> Remove-Variable
+Alias           rvpa -> Resolve-Path
+Alias           rwmi -> Remove-WmiObject
+Alias           sajb -> Start-Job
+Alias           sal -> Set-Alias
+Alias           saps -> Start-Process
+Alias           sasv -> Start-Service
+Alias           sbp -> Set-PSBreakpoint
+Alias           sc -> Set-Content
+Alias           scb -> Set-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           select -> Select-Object
+Alias           set -> Set-Variable
+Alias           shcm -> Show-Command
+Alias           si -> Set-Item
+Alias           sl -> Set-Location
+Alias           sleep -> Start-Sleep
+Alias           sls -> Select-String
+Alias           sort -> Sort-Object
+Alias           sp -> Set-ItemProperty
+Alias           spjb -> Stop-Job
+Alias           spps -> Stop-Process
+Alias           spsv -> Stop-Service
+Alias           start -> Start-Process
+Alias           stz -> Set-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           sujb -> Suspend-Job
+Alias           sv -> Set-Variable
+Alias           swmi -> Set-WmiInstance
+Alias           tee -> Tee-Object
+Alias           trcm -> Trace-Command
+Alias           type -> Get-Content
+Alias           wget -> Invoke-WebRequest
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+Alias           write -> Write-Output
+
+
+PS C:\Users\Usuario> Get-Alias -Definition "Get-Service"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           gsv -> Get-Service
+
+
+PS C:\Users\Usuario> Get-Alias -Definition "Get-ChildItem"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           dir -> Get-ChildItem
+Alias           gci -> Get-ChildItem
+Alias           ls -> Get-ChildItem
+
+
+PS C:\Users\Usuario> help *alias*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Export-Alias                      Cmdlet    Microsoft.PowerShell.U... Exports information about currently d...
+Get-Alias                         Cmdlet    Microsoft.PowerShell.U... Gets the aliases for the current sess...
+Import-Alias                      Cmdlet    Microsoft.PowerShell.U... Imports an alias list from a file.
+New-Alias                         Cmdlet    Microsoft.PowerShell.U... Creates a new alias.
+Set-Alias                         Cmdlet    Microsoft.PowerShell.U... Creates or changes an alias for a cmd...
+Alias                             Provider  Microsoft.PowerShell.Core Provides access to the Windows PowerS...
+about_Aliases                     HelpFile                            Describes how to use alternate names ...
+
+
+PS C:\Users\Usuario> help new-alias
+
+NOMBRE
+    New-Alias
+
+SINOPSIS
+    Creates a new alias.
+
+
+SINTAXIS
+    New-Alias [-Name] <String> [-Value] <String> [-Confirm] [-Description <String>] [-Force] [-Option {None |
+    ReadOnly | Constant | Private | AllScope | Unspecified}] [-PassThru] [-Scope <String>] [-WhatIf]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The New-Alias cmdlet creates a new alias in the current Windows PowerShell session. Aliases created by
+    using New-Alias are not saved after you exit the session or close Windows PowerShell. You can use the
+    Export-Alias cmdlet to save your alias information to a file. You can later use Import-Alias to retrieve
+    that saved alias information.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821831
+    Export-Alias
+    Get-Alias
+    Import-Alias
+    Set-Alias
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help New-Alias -examples".
+    Para obtener más información, escriba: "get-help New-Alias -detailed".
+    Para obtener información técnica, escriba: "get-help New-Alias -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help New-Alias -online"
+
+
+PS C:\Users\Usuario> help New-Alias -Full
+
+NOMBRE
+    New-Alias
+
+SINOPSIS
+    Creates a new alias.
+
+
+SINTAXIS
+    New-Alias [-Name] <String> [-Value] <String> [-Confirm] [-Description <String>] [-Force] [-Option {None |
+    ReadOnly | Constant | Private | AllScope | Unspecified}] [-PassThru] [-Scope <String>] [-WhatIf]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The New-Alias cmdlet creates a new alias in the current Windows PowerShell session. Aliases created by
+    using New-Alias are not saved after you exit the session or close Windows PowerShell. You can use the
+    Export-Alias cmdlet to save your alias information to a file. You can later use Import-Alias to retrieve
+    that saved alias information.
+
+
+PARÁMETROS
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Description <String>
+        Specifies a description of the alias. You can type any string. If the description includes spaces,
+        enclose it in quotation marks.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Force [<SwitchParameter>]
+        Indicates that the cmdlet acts like Set-Alias if the alias named already exists.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Name <String>
+        Specifies the new alias. You can use any alphanumeric characters in an alias, but the first character
+        cannot be a number.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -Option <ScopedItemOptions>
+        Specifies that the cmdlet sets the value of the Options property of the alias. The acceptable values
+        for this parameter are:
+
+        - None. Sets no options. (None is the default.)  - ReadOnly. Can be deleted. Cannot be not changed,
+        except by using the Force parameter. - Constant. Cannot be deleted or changed. - Private. The alias
+        is available only in the current scope.  - AllScope. The alias is copied to any new scopes that are
+        created.
+
+        To see the Options * * property of all aliases in the session, type `Get-Alias | Format-Table
+        -Property name, options -autosize`.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -PassThru [<SwitchParameter>]
+        Returns an object representing the item with which you are working. By default, this cmdlet does not
+        generate any output.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Scope <String>
+        Specifies the scope of the new alias. The acceptable values for this parameter are:
+
+        - Global
+
+        - Local
+
+        - Script
+
+        - A number relative to the current scope (0 through the number of scopes, where 0 is the current
+        scope and 1 is its parent).
+
+
+        Local is the default. For more information, see about_Scopes.
+
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Value <String>
+        Specifies the name of the cmdlet or command element that is being aliased.
+
+        ¿Requerido?                  true
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe input to this cmdlet.
+
+
+SALIDAS
+    None or System.Management.Automation.AliasInfo
+        When you use the Passthru parameter, New-Alias generates a System.Management.Automation.AliasInfo
+        object representing the new alias. Otherwise, this cmdlet does not generate any output.
+
+
+NOTAS
+
+
+        To create a new alias, use Set-Alias or New-Alias. To change an alias, use Set-Alias *. To delete an
+        alias, use Remove-Item.
+
+        *
+
+    Example 1: Create an alias for a cmdlet
+
+    PS C:\>New-Alias -Name "List" Get-ChildItem
+
+    This command creates an alias named List to represent the Get-ChildItem cmdlet.
+    Example 2: Create a read-only alias for a cmdlet
+
+    PS C:\>New-Alias -Name "W" -Value Get-WmiObject -Description "quick wmi alias" -Option ReadOnly
+    PS C:\>Get-Alias -Name "W" | Format-List *
+
+    This command creates an alias named W to represent the Get-WmiObject cmdlet. It creates a description,
+    quick wmi alias, for the alias and makes it read-only. The last line of the command uses Get-Alias to get
+    the new alias and pipes it to Format-List to display all of the information about it.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821831
+    Export-Alias
+    Get-Alias
+    Import-Alias
+    Set-Alias
+
+
+
+PS C:\Users\Usuario> new-alias -name np -value "Notepad"
+PS C:\Users\Usuario> np
+PS C:\Users\Usuario> exit
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200129085304
+**********************

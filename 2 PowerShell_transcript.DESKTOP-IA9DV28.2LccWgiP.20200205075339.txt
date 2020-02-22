@@ -1,0 +1,1566 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200205075339
+Nombre de usuario: DESKTOP-IA9DV28\Usuario
+Usuario RunAs: DESKTOP-IA9DV28\Usuario
+Nombre de la configuración: 
+Máquina: DESKTOP-IA9DV28 (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 8148
+PSVersion: 5.1.17763.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1
+BuildVersion: 10.0.17763.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Usuario\Documents\PowerShell_transcript.DESKTOP-IA9DV28.2LccWgiP.20200205075339.txt
+PS C:\Users\Usuario> pwd
+
+Path
+----
+C:\Users\Usuario
+
+
+PS C:\Users\Usuario> type
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Users\Usuario> ls
+
+
+    Directorio: C:\Users\Usuario
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-r---     22/01/2019  2:33 p. m.                3D Objects
+d-r---     22/01/2019  2:33 p. m.                Contacts
+d-r---     22/01/2019  2:54 p. m.                Desktop
+d-r---      5/02/2020  7:53 a. m.                Documents
+d-r---     22/01/2019  2:33 p. m.                Downloads
+d-r---     22/01/2019  2:33 p. m.                Favorites
+d-r---     22/01/2019  2:33 p. m.                Links
+d-r---     22/01/2019  2:33 p. m.                Music
+d-r---     29/01/2020  7:33 a. m.                OneDrive
+d-r---     22/01/2019  2:35 p. m.                Pictures
+d-r---     22/01/2019  2:33 p. m.                Saved Games
+d-r---     22/01/2019  2:35 p. m.                Searches
+d-r---     22/01/2019  2:33 p. m.                Videos
+
+
+PS C:\Users\Usuario> type
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Users\Usuario> cd
+PS C:\Users\Usuario> Get-ItemProperty -Path Documents | Get-Member
+
+
+   TypeName: System.IO.DirectoryInfo
+
+Name                      MemberType     Definition
+----                      ----------     ----------
+LinkType                  CodeProperty   System.String LinkType{get=GetLinkType;}
+Mode                      CodeProperty   System.String Mode{get=Mode;}
+Target                    CodeProperty   System.Collections.Generic.IEnumerable`1[[System.String, mscorlib,...
+Create                    Method         void Create(), void Create(System.Security.AccessControl.Directory...
+CreateObjRef              Method         System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+CreateSubdirectory        Method         System.IO.DirectoryInfo CreateSubdirectory(string path), System.IO...
+Delete                    Method         void Delete(), void Delete(bool recursive)
+EnumerateDirectories      Method         System.Collections.Generic.IEnumerable[System.IO.DirectoryInfo] En...
+EnumerateFiles            Method         System.Collections.Generic.IEnumerable[System.IO.FileInfo] Enumera...
+EnumerateFileSystemInfos  Method         System.Collections.Generic.IEnumerable[System.IO.FileSystemInfo] E...
+Equals                    Method         bool Equals(System.Object obj)
+GetAccessControl          Method         System.Security.AccessControl.DirectorySecurity GetAccessControl()...
+GetDirectories            Method         System.IO.DirectoryInfo[] GetDirectories(), System.IO.DirectoryInf...
+GetFiles                  Method         System.IO.FileInfo[] GetFiles(string searchPattern), System.IO.Fil...
+GetFileSystemInfos        Method         System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern...
+GetHashCode               Method         int GetHashCode()
+GetLifetimeService        Method         System.Object GetLifetimeService()
+GetObjectData             Method         void GetObjectData(System.Runtime.Serialization.SerializationInfo ...
+GetType                   Method         type GetType()
+InitializeLifetimeService Method         System.Object InitializeLifetimeService()
+MoveTo                    Method         void MoveTo(string destDirName)
+Refresh                   Method         void Refresh()
+SetAccessControl          Method         void SetAccessControl(System.Security.AccessControl.DirectorySecur...
+ToString                  Method         string ToString()
+PSChildName               NoteProperty   string PSChildName=Documents
+PSDrive                   NoteProperty   PSDriveInfo PSDrive=C
+PSParentPath              NoteProperty   string PSParentPath=Microsoft.PowerShell.Core\FileSystem::C:\Users...
+PSPath                    NoteProperty   string PSPath=Microsoft.PowerShell.Core\FileSystem::C:\Users\Usuar...
+PSProvider                NoteProperty   ProviderInfo PSProvider=Microsoft.PowerShell.Core\FileSystem
+Attributes                Property       System.IO.FileAttributes Attributes {get;set;}
+CreationTime              Property       datetime CreationTime {get;set;}
+CreationTimeUtc           Property       datetime CreationTimeUtc {get;set;}
+Exists                    Property       bool Exists {get;}
+Extension                 Property       string Extension {get;}
+FullName                  Property       string FullName {get;}
+LastAccessTime            Property       datetime LastAccessTime {get;set;}
+LastAccessTimeUtc         Property       datetime LastAccessTimeUtc {get;set;}
+LastWriteTime             Property       datetime LastWriteTime {get;set;}
+LastWriteTimeUtc          Property       datetime LastWriteTimeUtc {get;set;}
+Name                      Property       string Name {get;}
+Parent                    Property       System.IO.DirectoryInfo Parent {get;}
+Root                      Property       System.IO.DirectoryInfo Root {get;}
+BaseName                  ScriptProperty System.Object BaseName {get=$this.Name;}
+
+
+PS C:\Users\Usuario> Get-ItemProperty -Path .\Documents | Get-Member
+
+
+   TypeName: System.IO.DirectoryInfo
+
+Name                      MemberType     Definition
+----                      ----------     ----------
+LinkType                  CodeProperty   System.String LinkType{get=GetLinkType;}
+Mode                      CodeProperty   System.String Mode{get=Mode;}
+Target                    CodeProperty   System.Collections.Generic.IEnumerable`1[[System.String, mscorlib,...
+Create                    Method         void Create(), void Create(System.Security.AccessControl.Directory...
+CreateObjRef              Method         System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+CreateSubdirectory        Method         System.IO.DirectoryInfo CreateSubdirectory(string path), System.IO...
+Delete                    Method         void Delete(), void Delete(bool recursive)
+EnumerateDirectories      Method         System.Collections.Generic.IEnumerable[System.IO.DirectoryInfo] En...
+EnumerateFiles            Method         System.Collections.Generic.IEnumerable[System.IO.FileInfo] Enumera...
+EnumerateFileSystemInfos  Method         System.Collections.Generic.IEnumerable[System.IO.FileSystemInfo] E...
+Equals                    Method         bool Equals(System.Object obj)
+GetAccessControl          Method         System.Security.AccessControl.DirectorySecurity GetAccessControl()...
+GetDirectories            Method         System.IO.DirectoryInfo[] GetDirectories(), System.IO.DirectoryInf...
+GetFiles                  Method         System.IO.FileInfo[] GetFiles(string searchPattern), System.IO.Fil...
+GetFileSystemInfos        Method         System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern...
+GetHashCode               Method         int GetHashCode()
+GetLifetimeService        Method         System.Object GetLifetimeService()
+GetObjectData             Method         void GetObjectData(System.Runtime.Serialization.SerializationInfo ...
+GetType                   Method         type GetType()
+InitializeLifetimeService Method         System.Object InitializeLifetimeService()
+MoveTo                    Method         void MoveTo(string destDirName)
+Refresh                   Method         void Refresh()
+SetAccessControl          Method         void SetAccessControl(System.Security.AccessControl.DirectorySecur...
+ToString                  Method         string ToString()
+PSChildName               NoteProperty   string PSChildName=Documents
+PSDrive                   NoteProperty   PSDriveInfo PSDrive=C
+PSParentPath              NoteProperty   string PSParentPath=Microsoft.PowerShell.Core\FileSystem::C:\Users...
+PSPath                    NoteProperty   string PSPath=Microsoft.PowerShell.Core\FileSystem::C:\Users\Usuar...
+PSProvider                NoteProperty   ProviderInfo PSProvider=Microsoft.PowerShell.Core\FileSystem
+Attributes                Property       System.IO.FileAttributes Attributes {get;set;}
+CreationTime              Property       datetime CreationTime {get;set;}
+CreationTimeUtc           Property       datetime CreationTimeUtc {get;set;}
+Exists                    Property       bool Exists {get;}
+Extension                 Property       string Extension {get;}
+FullName                  Property       string FullName {get;}
+LastAccessTime            Property       datetime LastAccessTime {get;set;}
+LastAccessTimeUtc         Property       datetime LastAccessTimeUtc {get;set;}
+LastWriteTime             Property       datetime LastWriteTime {get;set;}
+LastWriteTimeUtc          Property       datetime LastWriteTimeUtc {get;set;}
+Name                      Property       string Name {get;}
+Parent                    Property       System.IO.DirectoryInfo Parent {get;}
+Root                      Property       System.IO.DirectoryInfo Root {get;}
+BaseName                  ScriptProperty System.Object BaseName {get=$this.Name;}
+
+
+PS C:\Users\Usuario> Get-ItemProperty -Path .\Documents -name attributes
+
+
+attributes   : ReadOnly, Directory
+PSPath       : Microsoft.PowerShell.Core\FileSystem::C:\Users\Usuario\Documents
+PSParentPath : Microsoft.PowerShell.Core\FileSystem::C:\Users\Usuario
+PSChildName  : Documents
+PSDrive      : C
+PSProvider   : Microsoft.PowerShell.Core\FileSystem
+
+
+
+PS C:\Users\Usuario> Get-Process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    311      10     6488        996       0,19   3980   1 ApplicationFrameHost
+    311      27    95604      80972      12,64   3772   1 chrome
+    234      10    15984       5840       0,23   3952   1 chrome
+    358      32   112348      78136      20,89   4284   1 chrome
+    316      17    34748      36992       6,89   4992   1 chrome
+   1152      27    76948      84996      27,38   6412   1 chrome
+    161       5     1252       1292       0,05   6492   1 chrome
+    144       6     1540        524       0,05   6848   1 chrome
+    425      16    28264      24780      33,20   7136   1 chrome
+    442      12    17564      17612      10,22   7156   1 chrome
+    250      10    17904       4660       0,45   7504   1 chrome
+    330       7     1056       1184               632   0 csrss
+    393      12     1136       1216               736   1 csrss
+    415       9     5312       5116       2,45   3528   1 ctfmon
+    249       8     2740        904              2548   0 dllhost
+    200       7     2120       1772       0,05   7552   1 dllhost
+    756      30    46768      40328              1128   1 dwm
+   2508      56    54780      43192      15,48   2032   1 explorer
+     49       4     1420        456               920   1 fontdrvhost
+     49       3     1076        352               928   0 fontdrvhost
+      0       0       40          4                 0   0 Idle
+    562      19    26920      39932       0,55   4528   1 LocalBridge
+   1058      13     4304       5432               856   0 lsass
+      0       0      536      38336              1696   0 Memory Compression
+    789      22    77916       5036       1,27   5484   1 Microsoft.Photos
+    219       7     2336        372              2816   0 msdtc
+    636      36   118640      55832              6772   0 MsMpEng
+    201      21     3260       1180              3892   0 NisSrv
+    264       8     2456       1116       1,88   6536   1 notepad
+    870      60    83132       7392       3,97   3484   1 OneDrive
+    917      39   176344      88480      36,97   8148   1 powershell_ise
+      0       7      956      10064                68   0 Registry
+    211       6     1980      12232       0,05   3520   1 RuntimeBroker
+    127       4     1196        868       0,03   3648   1 RuntimeBroker
+    440      12     5792       5800       1,27   5032   1 RuntimeBroker
+    122       4     1076       1256       0,02   6308   1 RuntimeBroker
+    348      10     6440      21932       0,34   7668   1 RuntimeBroker
+    685      24    18204      19256              5700   0 SearchIndexer
+   1079      34    49536         36       1,16   6320   1 SearchUI
+    409       9     3332       4944              4384   0 SecurityHealthService
+    151       5     1240        648       0,05   4420   1 SecurityHealthSystray
+    334       6     2844       3496               820   0 services
+    697      17    14056         16       0,64    740   1 ShellExperienceHost
+    556      10     4556       9544       2,72   2804   1 sihost
+    494      14    20344      22228       0,30   5504   1 SkypeApp
+    429      15    11000       3228       0,20   6104   1 smartscreen
+     53       2      320         76               516   0 smss
+    439      13     4212       2068              2004   0 spoolsv
+    409      25     6584       7272               560   0 svchost
+    904      13     6496       9964               948   0 svchost
+    927      11     4776       7040              1040   0 svchost
+    394       9     9636      11016              1220   0 svchost
+    718      16    16276      16252              1240   0 svchost
+    628      18    33820      33568              1268   0 svchost
+   1064      26     8684      11132              1372   0 svchost
+    671      22     5972       7700              1424   0 svchost
+    561      12    10524      10032              1432   0 svchost
+   2239      40    53072      35176              1444   0 svchost
+    227       7     1768       1364              1536   0 svchost
+    277       7     1944       1776              1792   0 svchost
+    130       6     1144       1560              1840   0 svchost
+    310       7     1588       2476              1848   0 svchost
+    194       6     4460       8528              1884   0 svchost
+    654      16     7268      11304       1,42   3268   1 svchost
+    221       9     1632       2660              3804   0 svchost
+    218       6     1724       2476              4056   0 svchost
+    252       7     2012       2452       0,06   4440   1 svchost
+   2319       0       64          8                 4   0 System
+    282      19     6012       6832       0,34   3372   1 taskhostw
+    172       6     2104        320              2084   0 VGAuthService
+    122       4     1156        268              1576   0 vmacthlp
+    288      11     3908       5292              2100   0 vmtoolsd
+    351      11     5168       3056       5,92   4380   1 vmtoolsd
+    831      17    10288         32       0,23   4584   1 WindowsInternal.ComposableShell.Experiences.TextI...
+    166       6      984        148               728   0 wininit
+    276       7     1836       2296               796   1 winlogon
+    534      14    28044         12       0,22   4852   1 WinStore.App
+    372      10    11324      10248              3108   0 WmiPrvSE
+    400      11     8624          4       0,13   7828   1 YourPhone
+
+
+PS C:\Users\Usuario> Get-Process | Sort-Object -Property id
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+      0       0       40          4                 0   0 Idle
+   2322       0       64          8                 4   0 System
+      0       7      956      10064                68   0 Registry
+     53       2      320         76               516   0 smss
+    409      25     6584       7272               560   0 svchost
+    330       7     1056       1184               632   0 csrss
+    166       6      984        148               728   0 wininit
+    393      12     1136       1216               736   1 csrss
+    697      17    14056         16       0,64    740   1 ShellExperienceHost
+    276       7     1836       2296               796   1 winlogon
+    334       6     2844       3496               820   0 services
+   1057      13     4304       5432               856   0 lsass
+     49       4     1420        456               920   1 fontdrvhost
+     49       3     1076        352               928   0 fontdrvhost
+    901      13     6452       9956               948   0 svchost
+    927      11     4764       7028              1040   0 svchost
+    761      30    46768      40536              1128   1 dwm
+    391       9     9592      11008              1220   0 svchost
+    718      16    16276      16252              1240   0 svchost
+    628      18    33856      33604              1268   0 svchost
+   1064      26     8684      11132              1372   0 svchost
+    671      22     5988       7712              1424   0 svchost
+    561      12    10524      10032              1432   0 svchost
+   2236      40    53096      35192              1444   0 svchost
+    227       7     1768       1364              1536   0 svchost
+    122       4     1156        268              1576   0 vmacthlp
+      0       0      536      38892              1696   0 Memory Compression
+    277       7     1944       1776              1792   0 svchost
+    130       6     1144       1560              1840   0 svchost
+    310       7     1588       2476              1848   0 svchost
+    194       6     4460       8528              1884   0 svchost
+    439      13     4212       2068              2004   0 spoolsv
+   2502      56    55040      43448      15,80   2032   1 explorer
+    172       6     2104        320              2084   0 VGAuthService
+    290      11     3908       5292              2100   0 vmtoolsd
+    249       8     2740        904              2548   0 dllhost
+    554      10     4532       9532       2,72   2804   1 sihost
+    219       7     2336        372              2816   0 msdtc
+    372      10    10788       9792              3108   0 WmiPrvSE
+    654      16     7268      11304       1,44   3268   1 svchost
+    282      19     6012       6832       0,34   3372   1 taskhostw
+    870      60    83132       7392       3,97   3484   1 OneDrive
+    211       6     1980      12232       0,05   3520   1 RuntimeBroker
+    415       9     5444       5272       2,50   3528   1 ctfmon
+    127       4     1196        868       0,03   3648   1 RuntimeBroker
+    311      27    95604      80628      12,64   3772   1 chrome
+    219       9     1632       2660              3804   0 svchost
+    201      21     3260       1180              3892   0 NisSrv
+    234      10    15984       5840       0,23   3952   1 chrome
+    311      10     6488        996       0,19   3980   1 ApplicationFrameHost
+    218       6     1724       2476              4056   0 svchost
+    358      32   112604      79728      20,92   4284   1 chrome
+    351      11     5168       3056       5,94   4380   1 vmtoolsd
+    409       9     3332       4944              4384   0 SecurityHealthService
+    151       5     1240        648       0,05   4420   1 SecurityHealthSystray
+    252       7     2012       2452       0,06   4440   1 svchost
+    562      19    26920      39932       0,55   4528   1 LocalBridge
+    831      17    10288         32       0,23   4584   1 WindowsInternal.ComposableShell.Experiences.TextI...
+    534      14    28044         12       0,22   4852   1 WinStore.App
+    316      17    34688      37004       6,89   4992   1 chrome
+    440      12     5792       5800       1,28   5032   1 RuntimeBroker
+    789      22    77916       5036       1,27   5484   1 Microsoft.Photos
+    494      14    20344      22228       0,30   5504   1 SkypeApp
+    685      24    18204      19256              5700   0 SearchIndexer
+    429      15    11000       3228       0,20   6104   1 smartscreen
+    122       4     1076       1256       0,02   6308   1 RuntimeBroker
+   1079      34    49536         36       1,16   6320   1 SearchUI
+   1150      27    76928      84988      27,44   6412   1 chrome
+    161       5     1252       1292       0,05   6492   1 chrome
+    264       8     2456       1116       1,88   6536   1 notepad
+    636      36   118640      56220              6772   0 MsMpEng
+    144       6     1540        524       0,05   6848   1 chrome
+    425      16    28264      24780      33,20   7136   1 chrome
+    442      12    17580      17620      10,27   7156   1 chrome
+    250      10    17904       4660       0,45   7504   1 chrome
+    200       7     2120       1772       0,05   7552   1 dllhost
+    348      10     6440      21932       0,34   7668   1 RuntimeBroker
+    400      11     8624          4       0,13   7828   1 YourPhone
+    947      39   176600      91612      40,39   8148   1 powershell_ise
+
+
+PS C:\Users\Usuario> Get-Process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    311      10     6488        156       0,19   3980   1 ApplicationFrameHost
+    311      28    95232      76856      13,27   3772   1 chrome
+    234      10    15984       3408       0,23   3952   1 chrome
+    361      32   110508      43644      21,30   4284   1 chrome
+    316      17    34688      35444       6,91   4992   1 chrome
+   1145      27    77492      51948      28,23   6412   1 chrome
+    161       5     1252       1024       0,05   6492   1 chrome
+    144       6     1540        196       0,05   6848   1 chrome
+    425      16    28264      24464      33,20   7136   1 chrome
+    435      12    17496      15928      11,14   7156   1 chrome
+    250      10    17904       3668       0,45   7504   1 chrome
+    345       7     1040       1200               632   0 csrss
+    394      12     1128       1192               736   1 csrss
+    415       9     5444       4904       2,50   3528   1 ctfmon
+    249       8     2740       2416              2548   0 dllhost
+    199       7     2120       1556       0,05   7552   1 dllhost
+    761      30    46768      37928              1128   1 dwm
+   2455      55    53592      37456      15,94   2032   1 explorer
+     49       4     1420         40               920   1 fontdrvhost
+     49       3     1076        316               928   0 fontdrvhost
+      0       0       40          4                 0   0 Idle
+    563      19    26880      37552       0,59   4528   1 LocalBridge
+   1063      13     4416       6160               856   0 lsass
+      0       0      596      51588              1696   0 Memory Compression
+    789      22    77916       5108       1,27   5484   1 Microsoft.Photos
+    219       7     2336         76              2816   0 msdtc
+    641      36   117612      41836              6772   0 MsMpEng
+    201      21     3260       1072              3892   0 NisSrv
+    264       8     2456        208       1,88   6536   1 notepad
+    879      60    83160      13384       4,17   3484   1 OneDrive
+    800      40   182148     152172      49,27   8148   1 powershell_ise
+      0       7      488      12360                68   0 Registry
+    207       6     1856      11708       0,08   3520   1 RuntimeBroker
+    127       4     1196        220       0,03   3648   1 RuntimeBroker
+    440      12     5796       6592       1,28   5032   1 RuntimeBroker
+    122       4     1076        764       0,02   6308   1 RuntimeBroker
+    344      10     6432      21672       0,34   7668   1 RuntimeBroker
+    673      24    17568      15424              5700   0 SearchIndexer
+   1079      34    49536        180       1,16   6320   1 SearchUI
+    409       9     3332       4012              4384   0 SecurityHealthService
+    151       5     1240        152       0,05   4420   1 SecurityHealthSystray
+    343       6     2952       3472               820   0 services
+    697      17    14056        104       0,64    740   1 ShellExperienceHost
+    554      10     4532       9120       2,77   2804   1 sihost
+    494      14    20344      22308       0,30   5504   1 SkypeApp
+    438      15    11008      10776       0,28   6104   1 smartscreen
+     53       2      320        220               516   0 smss
+    439      13     4212       1448              2004   0 spoolsv
+    402      25     6444       6224               560   0 svchost
+    906      13     6600      10092               948   0 svchost
+    937      11     4808       6896              1040   0 svchost
+    395       9    10220      12136              1220   0 svchost
+    721      16    15864      14240              1240   0 svchost
+    632      18    39812      36156              1268   0 svchost
+   1072      26     8840       9952              1372   0 svchost
+    753      23     6032       9684              1424   0 svchost
+    572      12    10812      13140              1432   0 svchost
+   2205      40    53220      34752              1444   0 svchost
+    227       7     1768       1348              1536   0 svchost
+    277       7     1944       1728              1792   0 svchost
+    130       6     1144       1540              1840   0 svchost
+    310       7     1540       2288              1848   0 svchost
+    189       6     4164       7936              1884   0 svchost
+    654      16     7216      11708       1,47   3268   1 svchost
+    213       9     1532       2532              3804   0 svchost
+    214       6     1624       2256              4056   0 svchost
+    252       7     2012       2076       0,08   4440   1 svchost
+    128       5     1232       6436              6892   0 svchost
+   2316       0       64          8                 4   0 System
+    282      17     5540       6752       0,34   3372   1 taskhostw
+    172       6     2104         32              2084   0 VGAuthService
+    122       4     1156         28              1576   0 vmacthlp
+    290      11     3976       5364              2100   0 vmtoolsd
+    351      11     5168       3008       6,13   4380   1 vmtoolsd
+    831      17    10288        188       0,23   4584   1 WindowsInternal.ComposableShell.Experiences.TextI...
+    166       6      984         24               728   0 wininit
+    276       7     1836       2224               796   1 winlogon
+    534      14    28044         72       0,22   4852   1 WinStore.App
+    372       9    10380       8676              3108   0 WmiPrvSE
+    178       6     1824       7376              4268   0 WmiPrvSE
+    400      11     8624         72       0,13   7828   1 YourPhone
+
+
+PS C:\Users\Usuario> Get-Process | Select-Object -Property Id, Name | Sort-Object -Property id
+
+  Id Name
+  -- ----
+   0 Idle
+   4 System
+  68 Registry
+ 516 smss
+ 560 svchost
+ 632 csrss
+ 728 wininit
+ 736 csrss
+ 740 ShellExperienceHost
+ 796 winlogon
+ 820 services
+ 856 lsass
+ 920 fontdrvhost
+ 928 fontdrvhost
+ 948 svchost
+1040 svchost
+1128 dwm
+1220 svchost
+1240 svchost
+1268 svchost
+1372 svchost
+1424 svchost
+1432 svchost
+1444 svchost
+1536 svchost
+1576 vmacthlp
+1696 Memory Compression
+1792 svchost
+1840 svchost
+1848 svchost
+1884 svchost
+2004 spoolsv
+2032 explorer
+2084 VGAuthService
+2100 vmtoolsd
+2548 dllhost
+2804 sihost
+2816 msdtc
+3108 WmiPrvSE
+3268 svchost
+3372 taskhostw
+3484 OneDrive
+3520 RuntimeBroker
+3528 ctfmon
+3648 RuntimeBroker
+3772 chrome
+3804 svchost
+3892 NisSrv
+3952 chrome
+3980 ApplicationFrameHost
+4056 svchost
+4268 WmiPrvSE
+4284 chrome
+4380 vmtoolsd
+4384 SecurityHealthService
+4420 SecurityHealthSystray
+4440 svchost
+4528 LocalBridge
+4584 WindowsInternal.ComposableShell.Experiences.TextInput.InputApp
+4852 WinStore.App
+4992 chrome
+5032 RuntimeBroker
+5484 Microsoft.Photos
+5504 SkypeApp
+5700 SearchIndexer
+6104 smartscreen
+6308 RuntimeBroker
+6320 SearchUI
+6412 chrome
+6492 chrome
+6536 notepad
+6772 MsMpEng
+6848 chrome
+7136 chrome
+7156 chrome
+7504 chrome
+7552 dllhost
+7668 RuntimeBroker
+7828 YourPhone
+8148 powershell_ise
+
+
+PS C:\Users\Usuario> Get-Service | Select-Object -Property Name, Status | Sort-Object -Property status
+
+Name                                      Status
+----                                      ------
+AJRouter                                 Stopped
+ScDeviceEnum                             Stopped
+SCPolicySvc                              Stopped
+SDRSVC                                   Stopped
+seclogon                                 Stopped
+Sense                                    Stopped
+SensorDataService                        Stopped
+SensorService                            Stopped
+SensrSvc                                 Stopped
+SessionEnv                               Stopped
+SharedAccess                             Stopped
+SharedRealitySvc                         Stopped
+shpamsvc                                 Stopped
+smphost                                  Stopped
+SNMPTRAP                                 Stopped
+spectrum                                 Stopped
+sppsvc                                   Stopped
+ssh-agent                                Stopped
+SstpSvc                                  Stopped
+StiSvc                                   Stopped
+svsvc                                    Stopped
+swprv                                    Stopped
+SCardSvr                                 Stopped
+tapisrv                                  Stopped
+RpcLocator                               Stopped
+RetailDemo                               Stopped
+NetTcpPortSharing                        Stopped
+NgcCtnrSvc                               Stopped
+NgcSvc                                   Stopped
+p2pimsvc                                 Stopped
+p2psvc                                   Stopped
+PeerDistSvc                              Stopped
+perceptionsimulation                     Stopped
+PhoneSvc                                 Stopped
+PimIndexMaintenanceSvc_c3ea9             Stopped
+pla                                      Stopped
+PNRPAutoReg                              Stopped
+PNRPsvc                                  Stopped
+PolicyAgent                              Stopped
+PrintNotify                              Stopped
+XboxGipSvc                               Stopped
+PushToInstall                            Stopped
+QWAVE                                    Stopped
+RasAuto                                  Stopped
+RasMan                                   Stopped
+RemoteAccess                             Stopped
+RemoteRegistry                           Stopped
+RmSvc                                    Stopped
+NetSetupSvc                              Stopped
+TermService                              Stopped
+TrustedInstaller                         Stopped
+WdiSystemHost                            Stopped
+WebClient                                Stopped
+Wecsvc                                   Stopped
+WEPHOSTSVC                               Stopped
+wercplsupport                            Stopped
+WerSvc                                   Stopped
+WFDSConMgrSvc                            Stopped
+WiaRpc                                   Stopped
+WinRM                                    Stopped
+wisvc                                    Stopped
+Wlansvc                                  Stopped
+wlpasvc                                  Stopped
+WManSvc                                  Stopped
+wmiApSrv                                 Stopped
+WMPNetworkSvc                            Stopped
+workfolderssvc                           Stopped
+WpcMonSvc                                Stopped
+WPDBusEnum                               Stopped
+WwanSvc                                  Stopped
+XblAuthManager                           Stopped
+XblGameSave                              Stopped
+wcncsvc                                  Stopped
+TieringEngineService                     Stopped
+WbioSrvc                                 Stopped
+WarpJITSvc                               Stopped
+tzautoupdate                             Stopped
+UevAgentService                          Stopped
+UmRdpService                             Stopped
+UnistoreSvc_c3ea9                        Stopped
+upnphost                                 Stopped
+UserDataSvc_c3ea9                        Stopped
+VacSvc                                   Stopped
+vds                                      Stopped
+vmicguestinterface                       Stopped
+vmicheartbeat                            Stopped
+vmickvpexchange                          Stopped
+vmicrdv                                  Stopped
+vmicshutdown                             Stopped
+vmictimesync                             Stopped
+vmicvmsession                            Stopped
+vmicvss                                  Stopped
+vmvss                                    Stopped
+VSS                                      Stopped
+W32Time                                  Stopped
+WaaSMedicSvc                             Stopped
+WalletService                            Stopped
+wbengine                                 Stopped
+Netman                                   Stopped
+PrintWorkflowUserSvc_c3ea9               Stopped
+dot3svc                                  Stopped
+DevQueryBroker                           Stopped
+diagnosticshub.standardcollector.service Stopped
+diagsvc                                  Stopped
+DisplayEnhancementService                Stopped
+DmEnrollmentSvc                          Stopped
+dmwappushservice                         Stopped
+DoSvc                                    Stopped
+Netlogon                                 Stopped
+DevicesFlowUserSvc_c3ea9                 Stopped
+DsmSvc                                   Stopped
+EFS                                      Stopped
+embeddedmode                             Stopped
+EntAppSvc                                Stopped
+Fax                                      Stopped
+fdPHost                                  Stopped
+FDResPub                                 Stopped
+fhsvc                                    Stopped
+FrameServer                              Stopped
+Eaphost                                  Stopped
+DevicePickerUserSvc_c3ea9                Stopped
+DeviceInstall                            Stopped
+DeviceAssociationService                 Stopped
+ALG                                      Stopped
+AppIDSvc                                 Stopped
+AppMgmt                                  Stopped
+AppReadiness                             Stopped
+AppVClient                               Stopped
+AppXSvc                                  Stopped
+AssignedAccessManagerSvc                 Stopped
+AxInstSV                                 Stopped
+BcastDVRUserService_c3ea9                Stopped
+BDESVC                                   Stopped
+BluetoothUserService_c3ea9               Stopped
+BTAGService                              Stopped
+bthserv                                  Stopped
+camsvc                                   Stopped
+CaptureService_c3ea9                     Stopped
+CertPropSvc                              Stopped
+ConsentUxUserSvc_c3ea9                   Stopped
+CscService                               Stopped
+defragsvc                                Stopped
+GoogleChromeElevationService             Stopped
+gpsvc                                    Stopped
+XboxNetApiSvc                            Stopped
+InstallService                           Stopped
+irmon                                    Stopped
+KtmRm                                    Stopped
+MessagingService_c3ea9                   Stopped
+MSiSCSI                                  Stopped
+msiserver                                Stopped
+MapsBroker                               Stopped
+LxpSvc                                   Stopped
+IKEEXT                                   Stopped
+IpxlatCfgSvc                             Stopped
+NcaSvc                                   Stopped
+icssvc                                   Stopped
+NaturalAuthentication                    Stopped
+NcdAutoSetup                             Stopped
+hidserv                                  Stopped
+GraphicsPerfSvc                          Stopped
+lltdsvc                                  Stopped
+gupdate                                  Stopped
+lfsvc                                    Stopped
+gupdatem                                 Stopped
+CDPSvc                                   Running
+mpssvc                                   Running
+BthAvctpSvc                              Running
+COMSysApp                                Running
+WdNisSvc                                 Running
+WdiServiceHost                           Running
+Wcmsvc                                   Running
+cbdhsvc_c3ea9                            Running
+PlugPlay                                 Running
+CDPUserSvc_c3ea9                         Running
+ClipSVC                                  Running
+BrokerInfrastructure                     Running
+SEMgrSvc                                 Running
+BITS                                     Running
+NcbService                               Running
+Appinfo                                  Running
+wuauserv                                 Running
+WSearch                                  Running
+wscsvc                                   Running
+WpnUserService_c3ea9                     Running
+WpnService                               Running
+NlaSvc                                   Running
+nsi                                      Running
+OneSyncSvc_c3ea9                         Running
+AudioEndpointBuilder                     Running
+Audiosrv                                 Running
+wlidsvc                                  Running
+PcaSvc                                   Running
+winmgmt                                  Running
+LSM                                      Running
+WinHttpAutoProxySvc                      Running
+WinDefend                                Running
+BFE                                      Running
+MSDTC                                    Running
+VMware Physical Disk Helper Service      Running
+Power                                    Running
+VMTools                                  Running
+SystemEventsBroker                       Running
+SysMain                                  Running
+RpcEptMapper                             Running
+DsSvc                                    Running
+StorSvc                                  Running
+DusmSvc                                  Running
+StateRepository                          Running
+RpcSs                                    Running
+TabletInputService                       Running
+SSDPSRV                                  Running
+Spooler                                  Running
+EventLog                                 Running
+SmsRouter                                Running
+EventSystem                              Running
+ShellHWDetection                         Running
+Schedule                                 Running
+FontCache                                Running
+SecurityHealthService                    Running
+SamSs                                    Running
+DPS                                      Running
+Themes                                   Running
+iphlpsvc                                 Running
+CryptSvc                                 Running
+lmhosts                                  Running
+DcomLaunch                               Running
+SENS                                     Running
+LicenseManager                           Running
+ProfSvc                                  Running
+VGAuthService                            Running
+LanmanWorkstation                        Running
+VaultSvc                                 Running
+Dhcp                                     Running
+UsoSvc                                   Running
+UserManager                              Running
+LanmanServer                             Running
+DiagTrack                                Running
+KeyIso                                   Running
+Dnscache                                 Running
+TrkWks                                   Running
+TokenBroker                              Running
+TimeBrokerSvc                            Running
+CoreMessagingRegistrar                   Running
+netprofm                                 Running
+
+
+PS C:\Users\Usuario> Get-Service | Select-Object -Property Name, Status | Sort-Object -Property id -Descending
+
+Name                                      Status
+----                                      ------
+AJRouter                                 Stopped
+SmsRouter                                Running
+SNMPTRAP                                 Stopped
+spectrum                                 Stopped
+Spooler                                  Running
+sppsvc                                   Stopped
+SSDPSRV                                  Running
+ssh-agent                                Stopped
+SstpSvc                                  Stopped
+StateRepository                          Running
+StiSvc                                   Stopped
+StorSvc                                  Running
+svsvc                                    Stopped
+smphost                                  Stopped
+swprv                                    Stopped
+SystemEventsBroker                       Running
+TabletInputService                       Running
+tapisrv                                  Stopped
+TermService                              Stopped
+Themes                                   Running
+TieringEngineService                     Stopped
+TimeBrokerSvc                            Running
+TokenBroker                              Running
+TrkWks                                   Running
+TrustedInstaller                         Stopped
+tzautoupdate                             Stopped
+UevAgentService                          Stopped
+SysMain                                  Running
+shpamsvc                                 Stopped
+ShellHWDetection                         Running
+SharedRealitySvc                         Stopped
+PushToInstall                            Stopped
+QWAVE                                    Stopped
+RasAuto                                  Stopped
+RasMan                                   Stopped
+RemoteAccess                             Stopped
+RemoteRegistry                           Stopped
+RetailDemo                               Stopped
+RmSvc                                    Stopped
+RpcEptMapper                             Running
+RpcLocator                               Stopped
+RpcSs                                    Running
+SamSs                                    Running
+SCardSvr                                 Stopped
+ScDeviceEnum                             Stopped
+Schedule                                 Running
+SCPolicySvc                              Stopped
+SDRSVC                                   Stopped
+seclogon                                 Stopped
+SecurityHealthService                    Running
+SEMgrSvc                                 Running
+SENS                                     Running
+Sense                                    Stopped
+SensorDataService                        Stopped
+SensorService                            Stopped
+SensrSvc                                 Stopped
+SessionEnv                               Stopped
+SharedAccess                             Stopped
+UmRdpService                             Stopped
+UnistoreSvc_c3ea9                        Stopped
+upnphost                                 Stopped
+UserDataSvc_c3ea9                        Stopped
+WEPHOSTSVC                               Stopped
+wercplsupport                            Stopped
+WerSvc                                   Stopped
+WFDSConMgrSvc                            Stopped
+WiaRpc                                   Stopped
+WinDefend                                Running
+WinHttpAutoProxySvc                      Running
+winmgmt                                  Running
+WinRM                                    Stopped
+wisvc                                    Stopped
+Wlansvc                                  Stopped
+wlidsvc                                  Running
+wlpasvc                                  Stopped
+WManSvc                                  Stopped
+wmiApSrv                                 Stopped
+WMPNetworkSvc                            Stopped
+workfolderssvc                           Stopped
+WpcMonSvc                                Stopped
+WPDBusEnum                               Stopped
+WpnService                               Running
+WpnUserService_c3ea9                     Running
+wscsvc                                   Running
+WSearch                                  Running
+wuauserv                                 Running
+WwanSvc                                  Stopped
+XblAuthManager                           Stopped
+XblGameSave                              Stopped
+Wecsvc                                   Stopped
+ProfSvc                                  Running
+WebClient                                Stopped
+WdiSystemHost                            Stopped
+UserManager                              Running
+UsoSvc                                   Running
+VacSvc                                   Stopped
+VaultSvc                                 Running
+vds                                      Stopped
+VGAuthService                            Running
+vmicguestinterface                       Stopped
+vmicheartbeat                            Stopped
+vmickvpexchange                          Stopped
+vmicrdv                                  Stopped
+vmicshutdown                             Stopped
+vmictimesync                             Stopped
+vmicvmsession                            Stopped
+vmicvss                                  Stopped
+VMTools                                  Running
+vmvss                                    Stopped
+VMware Physical Disk Helper Service      Running
+VSS                                      Stopped
+W32Time                                  Stopped
+WaaSMedicSvc                             Stopped
+WalletService                            Stopped
+WarpJITSvc                               Stopped
+wbengine                                 Stopped
+WbioSrvc                                 Stopped
+Wcmsvc                                   Running
+wcncsvc                                  Stopped
+WdiServiceHost                           Running
+WdNisSvc                                 Running
+XboxGipSvc                               Stopped
+PrintWorkflowUserSvc_c3ea9               Stopped
+Power                                    Running
+CscService                               Stopped
+DcomLaunch                               Running
+defragsvc                                Stopped
+DeviceAssociationService                 Stopped
+DeviceInstall                            Stopped
+DevicePickerUserSvc_c3ea9                Stopped
+DevicesFlowUserSvc_c3ea9                 Stopped
+DevQueryBroker                           Stopped
+Dhcp                                     Running
+diagnosticshub.standardcollector.service Stopped
+diagsvc                                  Stopped
+DiagTrack                                Running
+CryptSvc                                 Running
+DisplayEnhancementService                Stopped
+dmwappushservice                         Stopped
+Dnscache                                 Running
+DoSvc                                    Stopped
+dot3svc                                  Stopped
+DPS                                      Running
+DsmSvc                                   Stopped
+DsSvc                                    Running
+DusmSvc                                  Running
+Eaphost                                  Stopped
+EFS                                      Stopped
+embeddedmode                             Stopped
+EntAppSvc                                Stopped
+DmEnrollmentSvc                          Stopped
+CoreMessagingRegistrar                   Running
+ConsentUxUserSvc_c3ea9                   Stopped
+COMSysApp                                Running
+ALG                                      Stopped
+AppIDSvc                                 Stopped
+Appinfo                                  Running
+AppMgmt                                  Stopped
+AppReadiness                             Stopped
+AppVClient                               Stopped
+AppXSvc                                  Stopped
+AssignedAccessManagerSvc                 Stopped
+AudioEndpointBuilder                     Running
+Audiosrv                                 Running
+AxInstSV                                 Stopped
+BcastDVRUserService_c3ea9                Stopped
+BDESVC                                   Stopped
+BFE                                      Running
+BITS                                     Running
+BluetoothUserService_c3ea9               Stopped
+BrokerInfrastructure                     Running
+BTAGService                              Stopped
+BthAvctpSvc                              Running
+bthserv                                  Stopped
+camsvc                                   Stopped
+CaptureService_c3ea9                     Stopped
+cbdhsvc_c3ea9                            Running
+CDPSvc                                   Running
+CDPUserSvc_c3ea9                         Running
+CertPropSvc                              Stopped
+ClipSVC                                  Running
+EventLog                                 Running
+EventSystem                              Running
+Fax                                      Stopped
+fdPHost                                  Stopped
+msiserver                                Stopped
+NaturalAuthentication                    Stopped
+NcaSvc                                   Stopped
+NcbService                               Running
+NcdAutoSetup                             Stopped
+Netlogon                                 Stopped
+Netman                                   Stopped
+netprofm                                 Running
+NetSetupSvc                              Stopped
+NetTcpPortSharing                        Stopped
+NgcCtnrSvc                               Stopped
+NgcSvc                                   Stopped
+NlaSvc                                   Running
+nsi                                      Running
+OneSyncSvc_c3ea9                         Running
+p2pimsvc                                 Stopped
+p2psvc                                   Stopped
+PcaSvc                                   Running
+PeerDistSvc                              Stopped
+perceptionsimulation                     Stopped
+PhoneSvc                                 Stopped
+PimIndexMaintenanceSvc_c3ea9             Stopped
+pla                                      Stopped
+PlugPlay                                 Running
+PNRPAutoReg                              Stopped
+PNRPsvc                                  Stopped
+PolicyAgent                              Stopped
+MSiSCSI                                  Stopped
+PrintNotify                              Stopped
+MSDTC                                    Running
+MessagingService_c3ea9                   Stopped
+FDResPub                                 Stopped
+fhsvc                                    Stopped
+FontCache                                Running
+FrameServer                              Stopped
+GoogleChromeElevationService             Stopped
+gpsvc                                    Stopped
+GraphicsPerfSvc                          Stopped
+gupdate                                  Stopped
+gupdatem                                 Stopped
+hidserv                                  Stopped
+icssvc                                   Stopped
+IKEEXT                                   Stopped
+InstallService                           Stopped
+iphlpsvc                                 Running
+IpxlatCfgSvc                             Stopped
+irmon                                    Stopped
+KeyIso                                   Running
+KtmRm                                    Stopped
+LanmanServer                             Running
+LanmanWorkstation                        Running
+lfsvc                                    Stopped
+LicenseManager                           Running
+lltdsvc                                  Stopped
+lmhosts                                  Running
+LSM                                      Running
+LxpSvc                                   Stopped
+MapsBroker                               Stopped
+mpssvc                                   Running
+XboxNetApiSvc                            Stopped
+
+
+PS C:\Users\Usuario> Get-Service
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  AJRouter           Servicio de enrutador de AllJoyn
+Stopped  ALG                Servicio de puerta de enlace de niv...
+Stopped  AppIDSvc           Identidad de aplicación
+Running  Appinfo            Información de la aplicación
+Stopped  AppMgmt            Administración de aplicaciones
+Stopped  AppReadiness       Preparación de aplicaciones
+Stopped  AppVClient         Microsoft App-V Client
+Running  AppXSvc            Servicio de implementación de AppX ...
+Stopped  AssignedAccessM... Servicio AssignedAccessManager
+Running  AudioEndpointBu... Compilador de extremo de audio de W...
+Running  Audiosrv           Audio de Windows
+Stopped  AxInstSV           Instalador de ActiveX (AxInstSV)
+Stopped  BcastDVRUserSer... Servicio de usuario de difusión y G...
+Stopped  BDESVC             Servicio Cifrado de unidad BitLocker
+Running  BFE                Motor de filtrado de base
+Running  BITS               Servicio de transferencia inteligen...
+Stopped  BluetoothUserSe... Servicio de soporte técnico de usua...
+Running  BrokerInfrastru... Servicio de infraestructura de tare...
+Stopped  BTAGService        Servicio de puerta de enlace de aud...
+Running  BthAvctpSvc        Servicio AVCTP
+Stopped  bthserv            Servicio de compatibilidad con Blue...
+Stopped  camsvc             Servicio Administrador de funcional...
+Stopped  CaptureService_... CaptureService_c3ea9
+Running  cbdhsvc_c3ea9      Servicio de usuario del portapapele...
+Running  CDPSvc             Servicio de plataforma de dispositi...
+Running  CDPUserSvc_c3ea9   Servicio de usuario de plataforma d...
+Stopped  CertPropSvc        Propagación de certificados
+Running  ClipSVC            Servicio de licencia de cliente (Cl...
+Running  COMSysApp          Aplicación del sistema COM+
+Stopped  ConsentUxUserSv... ConsentUX_c3ea9
+Running  CoreMessagingRe... CoreMessaging
+Running  CryptSvc           Servicios de cifrado
+Stopped  CscService         Archivos sin conexión
+Running  DcomLaunch         Iniciador de procesos de servidor DCOM
+Stopped  defragsvc          Optimizar unidades
+Stopped  DeviceAssociati... Servicio de asociación de dispositivos
+Stopped  DeviceInstall      Servicio de instalación de disposit...
+Stopped  DevicePickerUse... DevicePicker_c3ea9
+Stopped  DevicesFlowUser... DevicesFlow_c3ea9
+Stopped  DevQueryBroker     Agente de detección en segundo plan...
+Running  Dhcp               Cliente DHCP
+Stopped  diagnosticshub.... Servicio Recopilador estándar del c...
+Stopped  diagsvc            Diagnostic Execution Service
+Running  DiagTrack          Telemetría y experiencias del usuar...
+Stopped  DisplayEnhancem... Servicio de mejora de visualización
+Stopped  DmEnrollmentSvc    Servicio de inscripción de administ...
+Stopped  dmwappushservice   Servicio de enrutamiento de mensaje...
+Running  Dnscache           Cliente DNS
+Stopped  DoSvc              Optimización de entrega
+Stopped  dot3svc            Configuración automática de redes c...
+Running  DPS                Servicio de directivas de diagnóstico
+Stopped  DsmSvc             Administrador de configuración de d...
+Running  DsSvc              Servicio de uso compartido de datos
+Running  DusmSvc            Uso de datos
+Stopped  Eaphost            Protocolo de autenticación extensible
+Stopped  EFS                Sistema de cifrado de archivos (EFS)
+Stopped  embeddedmode       Modo incrustado
+Stopped  EntAppSvc          Servicio de administración de aplic...
+Running  EventLog           Registro de eventos de Windows
+Running  EventSystem        Sistema de eventos COM+
+Stopped  Fax                Fax
+Stopped  fdPHost            Host de proveedor de detección de f...
+Stopped  FDResPub           Publicación de recurso de detección...
+Stopped  fhsvc              Servicio de historial de archivos
+Running  FontCache          Servicio de caché de fuentes de Win...
+Stopped  FrameServer        Servicio FrameServer de la Cámara d...
+Stopped  GoogleChromeEle... Google Chrome Elevation Service
+Stopped  gpsvc              Cliente de directiva de grupo
+Stopped  GraphicsPerfSvc    GraphicsPerfSvc
+Stopped  gupdate            Google Update Servicio (gupdate)
+Stopped  gupdatem           Google Update Servicio (gupdatem)
+Stopped  hidserv            Servicio de dispositivo de interfaz...
+Stopped  icssvc             Servicio de zona con cobertura inal...
+Stopped  IKEEXT             Módulos de creación de claves de IP...
+Stopped  InstallService     Servicio de instalación de Microsof...
+Running  iphlpsvc           Aplicación auxiliar IP
+Stopped  IpxlatCfgSvc       Servicio de configuración de trasla...
+Stopped  irmon              Servicio de monitor de infrarrojos
+Running  KeyIso             Aislamiento de claves CNG
+Stopped  KtmRm              KTMRM para DTC (Coordinador de tran...
+Running  LanmanServer       Servidor
+Running  LanmanWorkstation  Estación de trabajo
+Stopped  lfsvc              Servicio de geolocalización
+Running  LicenseManager     Servicio de administrador de licenc...
+Stopped  lltdsvc            Asignador de detección de topología...
+Running  lmhosts            Aplicación auxiliar de NetBIOS sobr...
+Running  LSM                Administrador de sesión local
+Stopped  LxpSvc             Servicio de experiencia de idioma
+Stopped  MapsBroker         Administrador de mapas descargados
+Stopped  MessagingServic... MessagingService_c3ea9
+Running  mpssvc             Firewall de Windows Defender
+Running  MSDTC              Coordinador de transacciones distri...
+Stopped  MSiSCSI            Servicio del iniciador iSCSI de Mic...
+Stopped  msiserver          Windows Installer
+Stopped  NaturalAuthenti... Autenticación natural
+Stopped  NcaSvc             Asistente para la conectividad de red
+Running  NcbService         Agente de conexión de red
+Stopped  NcdAutoSetup       Configuración automática de disposi...
+Stopped  Netlogon           Net Logon
+Stopped  Netman             Conexiones de red
+Running  netprofm           Servicio de lista de redes
+Stopped  NetSetupSvc        Servicio de configuración de red
+Stopped  NetTcpPortSharing  Servicio de uso compartido de puert...
+Stopped  NgcCtnrSvc         Contenedor de Microsoft Passport
+Stopped  NgcSvc             Microsoft Passport
+Running  NlaSvc             Reconoc. ubicación de red
+Running  nsi                Servicio Interfaz de almacenamiento...
+Running  OneSyncSvc_c3ea9   Sincronizar host_c3ea9
+Stopped  p2pimsvc           Administrador de identidad de redes...
+Stopped  p2psvc             Agrupación de red del mismo nivel
+Running  PcaSvc             Servicio Asistente para la compatib...
+Stopped  PeerDistSvc        BranchCache
+Stopped  perceptionsimul... Servicio de simulación de percepció...
+Stopped  PhoneSvc           Servicio telefónico
+Stopped  PimIndexMainten... Datos de contactos_c3ea9
+Stopped  pla                Registros y alertas de rendimiento
+Running  PlugPlay           Plug and Play
+Stopped  PNRPAutoReg        Servicio de publicación de nombres ...
+Stopped  PNRPsvc            Protocolo de resolución de nombres ...
+Stopped  PolicyAgent        Agente de directiva IPsec
+Running  Power              Energía
+Stopped  PrintNotify        Extensiones y notificaciones de imp...
+Stopped  PrintWorkflowUs... PrintWorkflow_c3ea9
+Running  ProfSvc            Servicio de perfil de usuario
+Stopped  PushToInstall      Servicio PushToInstall de Windows
+Stopped  QWAVE              Experiencia de calidad de audio y v...
+Stopped  RasAuto            Administrador de conexiones automát...
+Stopped  RasMan             Administrador de conexiones de acce...
+Stopped  RemoteAccess       Enrutamiento y acceso remoto
+Stopped  RemoteRegistry     Registro remoto
+Stopped  RetailDemo         Servicio de prueba comercial
+Stopped  RmSvc              Servicio de administración de radio
+Running  RpcEptMapper       Asignador de extremos de RPC
+Stopped  RpcLocator         Ubicador de llamada a procedimiento...
+Running  RpcSs              Llamada a procedimiento remoto (RPC)
+Running  SamSs              Administrador de cuentas de seguridad
+Stopped  SCardSvr           Tarjeta inteligente
+Stopped  ScDeviceEnum       Servicio de enumeración de disposit...
+Running  Schedule           Programador de tareas
+Stopped  SCPolicySvc        Directiva de extracción de tarjetas...
+Stopped  SDRSVC             Copias de seguridad de Windows
+Stopped  seclogon           Inicio de sesión secundario
+Running  SecurityHealthS... Servicio Seguridad de Windows
+Running  SEMgrSvc           Administrador de pagos y NFC/SE
+Running  SENS               Servicio de notificación de eventos...
+Stopped  Sense              Servicio de Protección contra amena...
+Stopped  SensorDataService  Servicio de datos del sensor
+Stopped  SensorService      Servicio de sensores
+Stopped  SensrSvc           Servicio de supervisión de sensores
+Stopped  SessionEnv         Configuración de Escritorio remoto
+Stopped  SharedAccess       Conexión compartida a Internet (ICS)
+Stopped  SharedRealitySvc   Servicio de datos espacial
+Running  ShellHWDetection   Detección de hardware shell
+Stopped  shpamsvc           Shared PC Account Manager
+Stopped  smphost            SMP de Espacios de almacenamiento d...
+Running  SmsRouter          Servicio enrutador de SMS de Micros...
+Stopped  SNMPTRAP           Captura de SNMP
+Stopped  spectrum           Servicio de percepción de Windows
+Running  Spooler            Cola de impresión
+Stopped  sppsvc             Protección de software
+Running  SSDPSRV            Detección SSDP
+Stopped  ssh-agent          OpenSSH Authentication Agent
+Stopped  SstpSvc            Servicio de protocolo de túnel de s...
+Running  StateRepository    Servicio de repositorio de estado
+Stopped  StiSvc             Adquisición de imágenes de Windows ...
+Running  StorSvc            Servicio de almacenamiento
+Stopped  svsvc              Comprobador puntual
+Stopped  swprv              Proveedor de instantáneas de softwa...
+Running  SysMain            SysMain
+Running  SystemEventsBroker Agente de eventos del sistema
+Running  TabletInputService Servicio de Panel de escritura a ma...
+Stopped  tapisrv            Telefonía
+Stopped  TermService        Servicios de Escritorio remoto
+Running  Themes             Temas
+Stopped  TieringEngineSe... Administración de capas de almacena...
+Running  TimeBrokerSvc      Agente de eventos de tiempo
+Running  TokenBroker        Administrador de cuentas web
+Running  TrkWks             Cliente de seguimiento de vínculos ...
+Stopped  TrustedInstaller   Instalador de módulos de Windows
+Stopped  tzautoupdate       Actualizador de zona horaria automá...
+Stopped  UevAgentService    Servicio de virtualización de la ex...
+Stopped  UmRdpService       Redirector de puerto en modo usuari...
+Stopped  UnistoreSvc_c3ea9  Almacenamiento de datos de usuarios...
+Stopped  upnphost           Dispositivo host de UPnP
+Stopped  UserDataSvc_c3ea9  Acceso a datos de usuarios_c3ea9
+Running  UserManager        Administrador de usuarios
+Running  UsoSvc             Update Orchestrator Service
+Stopped  VacSvc             Servicio Volumetric Audio Compositor
+Running  VaultSvc           Administrador de credenciales
+Stopped  vds                Disco virtual
+Running  VGAuthService      VMware Alias Manager and Ticket Ser...
+Stopped  vmicguestinterface Interfaz de servicio invitado de Hy...
+Stopped  vmicheartbeat      Servicio de latido de Hyper-V
+Stopped  vmickvpexchange    Servicio de intercambio de datos de...
+Stopped  vmicrdv            Servicio de virtualización de Escri...
+Stopped  vmicshutdown       Servicio de cierre de invitado de H...
+Stopped  vmictimesync       Servicio de sincronización de hora ...
+Stopped  vmicvmsession      Servicio PowerShell Direct de Hyper-V
+Stopped  vmicvss            Solicitante de instantáneas de volu...
+Running  VMTools            VMware Tools
+Stopped  vmvss              VMware Snapshot Provider
+Running  VMware Physical... Servicio auxiliar de disco físico d...
+Stopped  VSS                Instantáneas de volumen
+Stopped  W32Time            Hora de Windows
+Stopped  WaaSMedicSvc       Windows Update Medic Service
+Stopped  WalletService      WalletService
+Stopped  WarpJITSvc         WarpJITSvc
+Stopped  wbengine           Servicio del módulo de copia de seg...
+Stopped  WbioSrvc           Servicio biométrico de Windows
+Running  Wcmsvc             Administrador de conexiones de Windows
+Stopped  wcncsvc            Registrador de configuración de Win...
+Running  WdiServiceHost     Host del servicio de diagnóstico
+Running  WdiSystemHost      Host de sistema de diagnóstico
+Running  WdNisSvc           Servicio de inspección de red de An...
+Stopped  WebClient          Cliente web
+Stopped  Wecsvc             Recopilador de eventos de Windows
+Stopped  WEPHOSTSVC         Servicio host de proveedor de cifra...
+Stopped  wercplsupport      Ayuda del Panel de control de Infor...
+Stopped  WerSvc             Servicio Informe de errores de Windows
+Stopped  WFDSConMgrSvc      Servicio de administrador de conexi...
+Stopped  WiaRpc             Eventos de adquisición de imágenes ...
+Running  WinDefend          Servicio de Antivirus de Windows De...
+Running  WinHttpAutoProx... Servicio de detección automática de...
+Running  winmgmt            Instrumental de administración de W...
+Stopped  WinRM              Administración remota de Windows (W...
+Stopped  wisvc              Servicio de Windows Insider
+Stopped  Wlansvc            Configuración automática de WLAN
+Running  wlidsvc            Ayudante para el inicio de sesión d...
+Stopped  wlpasvc            Servicio de asistente para perfil l...
+Stopped  WManSvc            Servicio de administración de Windows
+Stopped  wmiApSrv           Adaptador de rendimiento de WMI
+Stopped  WMPNetworkSvc      Servicio de uso compartido de red d...
+Stopped  workfolderssvc     Carpetas de trabajo
+Stopped  WpcMonSvc          Control parental
+Stopped  WPDBusEnum         Servicio enumerador de dispositivos...
+Running  WpnService         Servicio del sistema de notificacio...
+Running  WpnUserService_... Servicio de usuario de notificacion...
+Running  wscsvc             Centro de seguridad
+Running  WSearch            Windows Search
+Running  wuauserv           Windows Update
+Stopped  WwanSvc            Configuración automática de WWAN
+Stopped  XblAuthManager     Administración de autenticación de ...
+Stopped  XblGameSave        Partida guardada en Xbox Live
+Stopped  XboxGipSvc         Xbox Accessory Management Service
+Stopped  XboxNetApiSvc      XboxNetApiSvc
+
+
+PS C:\Users\Usuario> Get-Service | Get-Member
+
+
+   TypeName: System.ServiceProcess.ServiceController
+
+Name                      MemberType    Definition
+----                      ----------    ----------
+Name                      AliasProperty Name = ServiceName
+RequiredServices          AliasProperty RequiredServices = ServicesDependedOn
+Disposed                  Event         System.EventHandler Disposed(System.Object, System.EventArgs)
+Close                     Method        void Close()
+Continue                  Method        void Continue()
+CreateObjRef              Method        System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Dispose                   Method        void Dispose(), void IDisposable.Dispose()
+Equals                    Method        bool Equals(System.Object obj)
+ExecuteCommand            Method        void ExecuteCommand(int command)
+GetHashCode               Method        int GetHashCode()
+GetLifetimeService        Method        System.Object GetLifetimeService()
+GetType                   Method        type GetType()
+InitializeLifetimeService Method        System.Object InitializeLifetimeService()
+Pause                     Method        void Pause()
+Refresh                   Method        void Refresh()
+Start                     Method        void Start(), void Start(string[] args)
+Stop                      Method        void Stop()
+WaitForStatus             Method        void WaitForStatus(System.ServiceProcess.ServiceControllerStatus de...
+CanPauseAndContinue       Property      bool CanPauseAndContinue {get;}
+CanShutdown               Property      bool CanShutdown {get;}
+CanStop                   Property      bool CanStop {get;}
+Container                 Property      System.ComponentModel.IContainer Container {get;}
+DependentServices         Property      System.ServiceProcess.ServiceController[] DependentServices {get;}
+DisplayName               Property      string DisplayName {get;set;}
+MachineName               Property      string MachineName {get;set;}
+ServiceHandle             Property      System.Runtime.InteropServices.SafeHandle ServiceHandle {get;}
+ServiceName               Property      string ServiceName {get;set;}
+ServicesDependedOn        Property      System.ServiceProcess.ServiceController[] ServicesDependedOn {get;}
+ServiceType               Property      System.ServiceProcess.ServiceType ServiceType {get;}
+Site                      Property      System.ComponentModel.ISite Site {get;set;}
+StartType                 Property      System.ServiceProcess.ServiceStartMode StartType {get;}
+Status                    Property      System.ServiceProcess.ServiceControllerStatus Status {get;}
+ToString                  ScriptMethod  System.Object ToString();
+
+
+PS C:\Users\Usuario> Get-Service | Select-Object name, status, StartType | Sort-Object -Property starttype
+
+Name                                      Status StartType
+----                                      ------ ---------
+Schedule                                 Running Automatic
+Dhcp                                     Running Automatic
+sppsvc                                   Stopped Automatic
+Wcmsvc                                   Running Automatic
+Dnscache                                 Running Automatic
+DoSvc                                    Stopped Automatic
+OneSyncSvc_c3ea9                         Running Automatic
+DPS                                      Running Automatic
+nsi                                      Running Automatic
+NlaSvc                                   Running Automatic
+DusmSvc                                  Running Automatic
+EventLog                                 Running Automatic
+EventSystem                              Running Automatic
+VMware Physical Disk Helper Service      Running Automatic
+SysMain                                  Running Automatic
+Spooler                                  Running Automatic
+VMTools                                  Running Automatic
+FontCache                                Running Automatic
+gpsvc                                    Stopped Automatic
+SamSs                                    Running Automatic
+gupdate                                  Stopped Automatic
+Themes                                   Running Automatic
+VGAuthService                            Running Automatic
+iphlpsvc                                 Running Automatic
+TrkWks                                   Running Automatic
+mpssvc                                   Running Automatic
+UsoSvc                                   Running Automatic
+LanmanServer                             Running Automatic
+LanmanWorkstation                        Running Automatic
+UserManager                              Running Automatic
+MapsBroker                               Stopped Automatic
+SystemEventsBroker                       Running Automatic
+ShellHWDetection                         Running Automatic
+DiagTrack                                Running Automatic
+LSM                                      Running Automatic
+BITS                                     Running Automatic
+SENS                                     Running Automatic
+BrokerInfrastructure                     Running Automatic
+DcomLaunch                               Running Automatic
+Audiosrv                                 Running Automatic
+ProfSvc                                  Running Automatic
+AudioEndpointBuilder                     Running Automatic
+WpnService                               Running Automatic
+CDPSvc                                   Running Automatic
+BFE                                      Running Automatic
+Power                                    Running Automatic
+winmgmt                                  Running Automatic
+CDPUserSvc_c3ea9                         Running Automatic
+WpnUserService_c3ea9                     Running Automatic
+RpcSs                                    Running Automatic
+RpcEptMapper                             Running Automatic
+CoreMessagingRegistrar                   Running Automatic
+CryptSvc                                 Running Automatic
+WSearch                                  Running Automatic
+wscsvc                                   Running Automatic
+WinDefend                                Running Automatic
+SDRSVC                                   Stopped    Manual
+TimeBrokerSvc                            Running    Manual
+TieringEngineService                     Stopped    Manual
+TokenBroker                              Running    Manual
+TermService                              Stopped    Manual
+seclogon                                 Stopped    Manual
+SecurityHealthService                    Running    Manual
+SCPolicySvc                              Stopped    Manual
+TrustedInstaller                         Stopped    Manual
+SEMgrSvc                                 Running    Manual
+Sense                                    Stopped    Manual
+TabletInputService                       Running    Manual
+smphost                                  Stopped    Manual
+SmsRouter                                Running    Manual
+SNMPTRAP                                 Stopped    Manual
+spectrum                                 Stopped    Manual
+SSDPSRV                                  Running    Manual
+UmRdpService                             Stopped    Manual
+SstpSvc                                  Stopped    Manual
+StateRepository                          Running    Manual
+SharedAccess                             Stopped    Manual
+SessionEnv                               Stopped    Manual
+SensrSvc                                 Stopped    Manual
+StiSvc                                   Stopped    Manual
+StorSvc                                  Running    Manual
+svsvc                                    Stopped    Manual
+swprv                                    Stopped    Manual
+SensorService                            Stopped    Manual
+SensorDataService                        Stopped    Manual
+tapisrv                                  Stopped    Manual
+SharedRealitySvc                         Stopped    Manual
+vmicshutdown                             Stopped    Manual
+upnphost                                 Stopped    Manual
+WEPHOSTSVC                               Stopped    Manual
+wercplsupport                            Stopped    Manual
+WerSvc                                   Stopped    Manual
+WFDSConMgrSvc                            Stopped    Manual
+WiaRpc                                   Stopped    Manual
+WinHttpAutoProxySvc                      Running    Manual
+WinRM                                    Stopped    Manual
+wisvc                                    Stopped    Manual
+Wlansvc                                  Stopped    Manual
+wlidsvc                                  Running    Manual
+wlpasvc                                  Stopped    Manual
+WManSvc                                  Stopped    Manual
+wmiApSrv                                 Stopped    Manual
+WMPNetworkSvc                            Stopped    Manual
+workfolderssvc                           Stopped    Manual
+WpcMonSvc                                Stopped    Manual
+WPDBusEnum                               Stopped    Manual
+wuauserv                                 Running    Manual
+WwanSvc                                  Stopped    Manual
+XblAuthManager                           Stopped    Manual
+XblGameSave                              Stopped    Manual
+Wecsvc                                   Stopped    Manual
+UnistoreSvc_c3ea9                        Stopped    Manual
+WebClient                                Stopped    Manual
+WdiSystemHost                            Running    Manual
+UserDataSvc_c3ea9                        Stopped    Manual
+VacSvc                                   Stopped    Manual
+VaultSvc                                 Running    Manual
+vds                                      Stopped    Manual
+vmicguestinterface                       Stopped    Manual
+vmicheartbeat                            Stopped    Manual
+vmickvpexchange                          Stopped    Manual
+vmicrdv                                  Stopped    Manual
+vmictimesync                             Stopped    Manual
+vmicvmsession                            Stopped    Manual
+vmicvss                                  Stopped    Manual
+vmvss                                    Stopped    Manual
+VSS                                      Stopped    Manual
+W32Time                                  Stopped    Manual
+WaaSMedicSvc                             Stopped    Manual
+WalletService                            Stopped    Manual
+WarpJITSvc                               Stopped    Manual
+wbengine                                 Stopped    Manual
+WbioSrvc                                 Stopped    Manual
+wcncsvc                                  Stopped    Manual
+WdiServiceHost                           Running    Manual
+WdNisSvc                                 Running    Manual
+AJRouter                                 Stopped    Manual
+PrintWorkflowUserSvc_c3ea9               Stopped    Manual
+SCardSvr                                 Stopped    Manual
+DevQueryBroker                           Stopped    Manual
+diagnosticshub.standardcollector.service Stopped    Manual
+diagsvc                                  Stopped    Manual
+DisplayEnhancementService                Stopped    Manual
+DmEnrollmentSvc                          Stopped    Manual
+dmwappushservice                         Stopped    Manual
+dot3svc                                  Stopped    Manual
+DsmSvc                                   Stopped    Manual
+DsSvc                                    Running    Manual
+Eaphost                                  Stopped    Manual
+DevicesFlowUserSvc_c3ea9                 Stopped    Manual
+EFS                                      Stopped    Manual
+EntAppSvc                                Stopped    Manual
+Fax                                      Stopped    Manual
+fdPHost                                  Stopped    Manual
+FDResPub                                 Stopped    Manual
+fhsvc                                    Stopped    Manual
+FrameServer                              Stopped    Manual
+GoogleChromeElevationService             Stopped    Manual
+GraphicsPerfSvc                          Stopped    Manual
+gupdatem                                 Stopped    Manual
+hidserv                                  Stopped    Manual
+embeddedmode                             Stopped    Manual
+DevicePickerUserSvc_c3ea9                Stopped    Manual
+DeviceInstall                            Stopped    Manual
+DeviceAssociationService                 Stopped    Manual
+ALG                                      Stopped    Manual
+AppIDSvc                                 Stopped    Manual
+Appinfo                                  Running    Manual
+AppMgmt                                  Stopped    Manual
+AppReadiness                             Stopped    Manual
+AppXSvc                                  Running    Manual
+AssignedAccessManagerSvc                 Stopped    Manual
+AxInstSV                                 Stopped    Manual
+BcastDVRUserService_c3ea9                Stopped    Manual
+BDESVC                                   Stopped    Manual
+BluetoothUserService_c3ea9               Stopped    Manual
+BTAGService                              Stopped    Manual
+BthAvctpSvc                              Running    Manual
+bthserv                                  Stopped    Manual
+camsvc                                   Stopped    Manual
+CaptureService_c3ea9                     Stopped    Manual
+cbdhsvc_c3ea9                            Running    Manual
+CertPropSvc                              Stopped    Manual
+ClipSVC                                  Running    Manual
+COMSysApp                                Running    Manual
+ConsentUxUserSvc_c3ea9                   Stopped    Manual
+CscService                               Stopped    Manual
+defragsvc                                Stopped    Manual
+icssvc                                   Stopped    Manual
+ScDeviceEnum                             Stopped    Manual
+IKEEXT                                   Stopped    Manual
+IpxlatCfgSvc                             Stopped    Manual
+InstallService                           Stopped    Manual
+p2psvc                                   Stopped    Manual
+PcaSvc                                   Running    Manual
+PeerDistSvc                              Stopped    Manual
+perceptionsimulation                     Stopped    Manual
+PhoneSvc                                 Stopped    Manual
+PimIndexMaintenanceSvc_c3ea9             Stopped    Manual
+pla                                      Stopped    Manual
+PlugPlay                                 Running    Manual
+PNRPAutoReg                              Stopped    Manual
+PNRPsvc                                  Stopped    Manual
+PolicyAgent                              Stopped    Manual
+PrintNotify                              Stopped    Manual
+XboxGipSvc                               Stopped    Manual
+PushToInstall                            Stopped    Manual
+QWAVE                                    Stopped    Manual
+RasAuto                                  Stopped    Manual
+RasMan                                   Stopped    Manual
+RetailDemo                               Stopped    Manual
+RmSvc                                    Stopped    Manual
+RpcLocator                               Stopped    Manual
+NgcSvc                                   Stopped    Manual
+NgcCtnrSvc                               Stopped    Manual
+p2pimsvc                                 Stopped    Manual
+NetSetupSvc                              Stopped    Manual
+irmon                                    Stopped    Manual
+KeyIso                                   Running    Manual
+KtmRm                                    Stopped    Manual
+lfsvc                                    Stopped    Manual
+LicenseManager                           Running    Manual
+lltdsvc                                  Stopped    Manual
+lmhosts                                  Running    Manual
+LxpSvc                                   Stopped    Manual
+MessagingService_c3ea9                   Stopped    Manual
+MSDTC                                    Running    Manual
+XboxNetApiSvc                            Stopped    Manual
+MSiSCSI                                  Stopped    Manual
+netprofm                                 Running    Manual
+Netman                                   Stopped    Manual
+NcdAutoSetup                             Stopped    Manual
+NcbService                               Running    Manual
+Netlogon                                 Stopped    Manual
+NaturalAuthentication                    Stopped    Manual
+msiserver                                Stopped    Manual
+NcaSvc                                   Stopped    Manual
+UevAgentService                          Stopped  Disabled
+shpamsvc                                 Stopped  Disabled
+AppVClient                               Stopped  Disabled
+RemoteAccess                             Stopped  Disabled
+RemoteRegistry                           Stopped  Disabled
+ssh-agent                                Stopped  Disabled
+NetTcpPortSharing                        Stopped  Disabled
+tzautoupdate                             Stopped  Disabled
+
+
+PS C:\Users\Usuario> exit
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200205084649
+**********************
